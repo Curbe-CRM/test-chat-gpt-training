@@ -1,0 +1,71 @@
+{
+    "servicio":{
+        "nombre":"Cuenta Corriente",
+        "descripcion":"La cuenta corriente, es un depósito a la vista, es decir, que el titular puede sacar su dinero, en parte o en su totalidad, en cualquier momento, a través de distintos canales como Internet, datáfonos, o cajeros automáticos. Lo que diferencia a este producto es que adicional a la expedición de una tarjeta débito, se entrega otro medio de pago en la forma de documentos de papel que sirven para transferir dinero de un lugar a otro, los famosos cheques.",
+        "beneficiarios":[
+            {
+                "nombre":"Personas Naturales",
+                "descipcion":"Una Persona Natural es una persona humana que ejerce derechos y cumple obligaciones a título personal."
+            },
+            {
+                "nombre":"Personas Juridicas",
+                "descipcion":"Una Persona Jurídica es una empresa que ejerce sus propios derechos y cumple sus propias obligaciones."
+            }
+        ],
+        "beneficios":[
+            {
+                "nombre":"No existe riesgo cambiario",
+                "descripcion":"Panamá por mandato constitucional no emite papel moneda y todas las transacciones se realizan en dólares de los Estados Unidos de Norteamérica."
+            },
+            {
+                "nombre":"Ahorro en tus transacciones",
+                "descripcion":"El régimen tributario de Panamá no grava la renta obtenida de transacciones fuera de territorio de la República de Panamá."
+            },
+            {
+                "nombre":"Exento de impuestos",
+                "descripcion":"Tasas netas que le generan mayor rendimiento, ya que exime de impuestos a los intereses ganados."
+            },
+            {
+                "nombre":"Seguridad Jurídica",
+                "descripcion":"Garantizamos pleno sigilo bancario y seguridad jurídica bajo las leyes panameñas."
+            },
+            {
+                "nombre":"Chequera propia de la cuenta",
+                "descripcion":"Su cuenta corriente tiene una chequera válida en la banca panameña sin restricciones y es compensado por todos los Bancos de Panamá. Su cheque en el exterior puede ser efectivizado a través de Cobranzas por su Banco Local."
+            },
+            {
+                "nombre":"Puede solicitar su tarjeta de Débito",
+                "descripcion":"Puede solicitar la tarjeta de consumo DEBITO VISA PLATINUM"
+            },
+            {
+                "nombre":"Transferencias de fondos desde el exterior",
+                "descripcion":"Recibimos sus transferencias de fondos originadas en cualquier banco internacional a través de nuestro banco corresponsal."
+            },
+            {
+                "nombre":"Estado de cuenta On-line",
+                "descripcion":"Esta  cuenta te brinda el beneficio de consultar tu estado de cuenta on-line y la tarjeta de DEBITO VISA PLATINUM."
+            },
+            {
+                "nombre":"Realiza Compras",
+                "descripcion":"Puedes realizar compras con la tarjeta VISA DEBIT PLATINUM aceptada a nivel Mundial."
+            },
+            {
+                "nombre":"Usa tu dinero en cualquier lugar",
+                "descripcion":"Dispón de tu dinero en la red de cajeros automáticos  Visa/Plus  alrededor del mundo."
+            },
+            {
+                "nombre":"Disfruta de descuentos",
+                "descripcion":"Recibe descuentos en establecimientos comerciales a nivel nacional e internacional con tu tarjeta VISA DEBIT PLATINUM."
+            },
+            {
+                "nombre":"Seguridad en sus transacciones",
+                "descipcion":"Seguridad de transacciones por medio del envío de confirmaciones vía correos electrónicos."
+            },
+            {
+                "nombre":"Sobregiros Ocasionales",
+                "descipcion":"Sobregiros Ocasionales para solucionar tus necesidades inmediatas"
+            }
+        ]
+
+    }
+}

@@ -1,0 +1,373 @@
+    {
+        "tarjeta":[            {
+            "nombre":"Visa Credito Platinum",
+            "descripcion":"La tarjeta Visa Crédito Platinum AustroBank fue diseñada específicamente para satisfacer los requerimientos de un grupo selecto de clientes de alto nivel. Proporcionando beneficios y servicios superiores, la tarjeta Visa Crédito Platinum permite a los tarjetahabientes disfrutar por completo de sus actividades y viajes con total libertad, confianza y tranquilidad. VISA Crédito Austrobank Platinum representa la máxima expresión de exclusividad y servicio. Es el instrumento ideal para aquellas personas que han logrado alcanzar sus grandes metas y que aún no se cansan de soñar. Tiene lamayor aceptación alrededor del mundo y beneficios exclusivos que usted valorará durante sus viajes de placer o negocios.",
+            "proteccion": [
+                {
+                    "nombre": "Protección de compras",
+                    "descripcion": "Si adquirió un producto nuevo con su tarjeta y el mismo es robado o sufre daños accidentales, su protección de compras puede pagar por la reparación del mismo o compensar el valor del artículo hasta cuarenta y cinco días a partir de la fecha de compra."
+                },
+                {
+                    "nombre": "Protección de precios",
+                    "descripcion": "Si adquirió un producto nuevo con su tarjeta y lo consiguió a un precio más bajo en menos de treinta días a partir de la fecha de compra, su protección de precios le compensará la diferencia de precio hasta por el monto indicado por artículo y por cuenta por año. La compensación se tiene que solicitar hasta cuatro días luego de haber encontrado el nuevo precio."
+                },
+                {
+                    "nombre": "Garantia Extendida",
+                    "descripcion": "Si adquirió un producto nuevo con su tarjeta, su garantía extendida duplica o extiende el período de reparación gratuita otorgado por el fabricante original del producto, hasta por un año adicional, en productos que tengan una garantía del fabricante mínima de tres meses y hasta tres años de duración."
+                },
+                {
+                    "nombre": "Servicios de Emergencia Médica Internacional + Certificado Schengen",
+                    "descripcion": "Cobertura en caso de accidentes o emergencias médicas que ocurran mientras disfrutan de sus viajes en el extranjero, estos servicios incluyen gastos médicos, gastos dentales, gastos de recetas médicas y de transporte; protección que cubre viajes de hasta sesenta días de duración. "
+                },
+                {
+                    "nombre": "Seguro de Alquiler de Autos",
+                    "descripcion": "Al pagar el alquiler con su tarjeta protege al vehículo alquilado contra colisión, hurto, vandalismo, incendios, accidentes parciales y accidentes totales; este seguro lo cubre a Ud., y a todos los conductores registrados en el contrato de alquiler, no tiene deducible y no tiene límite de cobertura. La reservación y el pago total del importe del alquiler tiene que hacerse con tu tarjeta Visa Patinum, esta protección cubre alquileres de hasta treinta y un días de duración."
+                },
+                {
+                    "nombre": "Seguro de Accidentes de Viaje en Medios de Transporte",
+                    "descripcion": "Cada vez que Usted compre con VISA PLATINUM un ticket en un medio de transporte puede ser aéreo, terrestre o marítimo registrado con las autoridades de transporte, tendrá automáticamente un Seguro de Accidentes en Viajes, con una cobertura de hasta US$500.000 en caso de muerte accidental o desmembramiento, el seguro le cubre a usted, a su cónyuge y a sus hijos menores de 23 años"
+                }
+            ],
+            "servicios": [
+                {
+                    "nombre": "Servicio de Información para el Viajero",
+                    "funciones":[
+                        {
+                            "nombre":"Asistencia previa al viaje",
+                            "descripcion":"proporciona información sobre destinos,ubicación de cajeros automáticos, los tipos de cambio, pasaporte,visado,requisitos de salud,inmunizaciones."
+                        },
+                        {
+                            "nombre":"Asistencia durante el viaje",
+                            "descripcion":" Los agentes del Centro de Asistencia al Cliente Visa le ayudarán a activar todos los seguros y beneficios de Visa Platinum, incluyendo los servicios de emergencia médica internacional."
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Reposición de Tarjeta + Adelanto de Efectivo de Emergencia",
+                    "funciones":[
+                        {
+                            "nombre":"Reemplazo urgente de tarjetas",
+                            "descripcion":"Este servicio ayuda con el reemplazo  en caso de emergencia por robo o extravío de su tarjeta cuando se encuentra viajando internacionalmente, normalmente dentro de un plazo de un día laboral."
+                        },
+                        {
+                            "nombre":"Adelanto de efectivo de emergencia",
+                            "descripcion":"Este servicio le proporciona efectivo en unas horas en caso de emergencia mientras se encuentran viajando en el extranjero."
+                        }
+                    ]                    
+                },
+                {
+                    "nombre": "Centro de Atención de Beneficios de Tarjetas Visa",
+                    "descripcion": "Puede comunicarse con el Centro de Asistencia al Cliente Visa para solicitar servicios o beneficios usando una red mundial de números telefónicos gratuitos.",
+                    "informacion_relacionada": {
+                        "beneficios_asociados": "Los beneficios asociados a la tarjeta Visa del tarjeta habiente",
+                        "certificados_de_cobertura": "Los certificados de cobertura de seguros",
+                        "transferencia_expertos_reclamos": "Transferencia a expertos para reclamos y servicios de emergencia médica internacional",
+                        "transferencia_agentes_rewards": "Transferencia a los agentes de Visa Rewards",
+                        "transferencia_agentes_concierge": "Transferencia a los agentes de Visa Concierge",
+                        "asistencia_personal_bancos": "Asistencia al personal de las agencias bancarias y agentes del centro de atención de los bancos"
+                    }
+                },
+                {
+                    "nombre":"Asistente Personal Visa Concierge",
+                    "descripcion":"Su Asistente Personal Visa Concierge trabaja para usted las 24 horas del día, los 365 días del año para facilitarle en todos los momentos de su día",
+                    "funciones":[
+                        {
+                            "nombre":"Viajes",
+                            "contenido":["Recomendaciones y reservaciones de vuelos, hoteles, cruceros y excusiones, paseos y tours","Reservas y arreglos para alquilar vehículos (incluyendo automóviles de lujo), helicópteros y yates"]
+                        },
+                        {
+                            "nombre":"Entretenimiento y experiencias",
+                            "contenido":["Recomendaciones y reservaciones para teatros, ópera, ballet, conciertos, museos y otras actividades y eventos culturales y deportivos, restaurantes",
+                            "Información y reservas para disfrutar de la vida nocturna","Excursiones y visitas a lugares de interés",
+                            "Recomendaciones, horarios y reservas de canchas de tenis, campos de golf, gimnasios y clubes deportivos",
+                            "Información sobre los deportes especiales que se pueden practicar en el destino donde te encuentres disfrutando el viaje de sus sueños"]
+                        },
+                        {
+                            "nombre":"Servicios especiales",
+                            "contenido":["Recomendación y reserva de salones de conferencias en hoteles o centros ejecutivos","Recomendación de intérpretes y traductores",
+                            "Alquiler de equipos (computadores, teléfonos celulares, etc.)","Información sobre reglas de etiqueta y protocolo",
+                            "Referencias para obtener servicios de apoyo y seguridad","Referencias para obtener asesoría jurídica"]
+                        },
+                        {
+                            "nombre":"Regalos y compras",
+                            "contenido":["Sugerencias e ideas para regalos","Envío de arreglos florales, globos, canastas y paquetes de regalo", " Localización de artículos difíciles de encontrar (dentro de lo posible)",
+                            "Información sobre los mejores lugares para comprar","Asistencia con compras personales"]
+
+                        }
+                    ]
+
+                }
+            ],
+            "servicios_exclusivos":[
+                {
+                    "descripcion":"Pago mínimo de Consumos"
+                },
+                {
+                    "descripcion":"Débito Automático mensual de su cuenta corriente o Ahorros de AUSTROBANK"
+                },
+                {
+                    "descripcion":"Envío de Estado de Cuenta por correo electrónico gratuito"
+                },
+                {
+                    "descripcion":"Servicio gratuito de Alertas de Consumos por correo electrónico"
+                },
+                {
+                    "nombre":"Programa de Premios Austrobank Rewards",
+                    "descripcion":"Afiliación gratuita al Programa de Premios que le permite acumular 1 punto por cada B/.1.00 de consumo y puede redimir sus puntos por pasajes gratis, a cualquier lugar del mundo y en la aerolínea de su preferencia. ABO x 2: Sus puntos se duplican por cada dólar consumido en el establecimientos de categoría viajes aerolíneas, agencias de viaje y hoteles.10.000 puntos en la tarjeta platinum por haber consumido USD 20.000.  En compras en los primeros tres meses desde la entrega de su tarjeta Platinum."                    
+                },
+                {
+                    "nombre":"Programa de Premios Austrobank Rewards",
+                    "descripcion":"Afiliación gratuita al Programa de Premios que le permite acumular 1 punto por cada B/.1.00 de consumo y puede redimir sus puntos por pasajes gratis, a cualquier lugar del mundo y en la aerolínea de su preferencia. ABO x 2: Sus puntos se duplican por cada dólar consumido en el establecimientos decategoría viajes aerolíneas, agencias de viaje y hoteles. 10.000 puntos en la tarjeta platinum por haber consumido USD 20.000. en compras en los primeros tres meses desde la entrega de su tarjeta Platinum."
+                },
+                {
+                    "nombre":"Abo-flex",
+                    "descripcion":"Realice su consumo en cualquier parte del mundo y difiera hasta 36 meses con intereses a una tasa muy competitiva."
+                },
+                {
+                    "nombre":"Avances de Efectivo",
+                    "descripcion":"Realice avances de efectivo a nivel mundial en cajeros automáticos a través de la red Visa Plus."
+                },
+                {
+                    "nombre":"Call Center",
+                    "descripcion":"Realice sus consultas, requerimientos y reportes de emergencia (extravío y/o robo de tarjeta) a través de nuestra exclusiva plataforma de atención persona- lizada contactándonos al (507) 216-92000 las 24 horas del día y los 365 días de la semana."
+                },
+                {
+                    "nombre":"Web",
+                    "descripcion":"Acceda a consultar su estado de cuenta los 365 días del año. a través del enlace: http://austrobank.com/austro/banca-en-linea/."
+                }
+            ]
+        },
+        {
+            "nombre":"VISA INFINITE",
+            "descripcion": "AustroBank tiene el gusto de darle la bienvenida como cliente de Visa Infinite, un estimulante mundo de infinitas posibilidades diseñada para llenar sus más altas expectativas., permitiéndole disfrutar por completo de sus actividades y viajes con total libertad, confianza y tranquilidad. Aceptada en más de 25 millones de estable- cimientos y más de 750.000 cajeros automáticos, Visa Infinite identifica inmediatamente al tarjetahabiente como un cliente preferente de clase alta que ha escogido la forma más fácil, segura y conveniente de pagar en tiendas, supermercados, restau- rantes, hoteles, agencias de viajes, incluyendo prestigiosos establecimientos en todos el mundo.",
+            "proteccion": [
+                {
+                    "nombre":"Pérdida de Conexiones:",
+                    "descripcion":"Esta protección le cubre a Ud., a su cónyuge y a sus hijos menores de 23 años en todos los tramos del viaje incluyendo el de regreso a casa; el medio de transporte puede ser aéreo, terrestre o marítimo y tiene que estar debidamente registrado con la autoridad de transporte y tener, además, rutas y horarios publicados. Esta protección cubre viajes de hasta sesenta días de duración "
+                },
+                {
+                    "nombre":"Seguro de accidentes en destinos de Viajes",
+                    "descripcion":"Cubre a Ud., a su cónyuge y a sus hijos menores de 23 años, en caso de muerte accidental o desmembramiento a raíz de un accidente cuando se encuentre en el destino de viaje; el medio de transporte puede ser aéreo, terrestre o marítimo y tiene que estar debidamente registrado con la autoridad de transporte y tener, además, rutas y horarios publicados"
+                },
+                {
+                    "nombre":"Demora de Viaje",
+                    "descripcion":"Cubre a Ud., a su cónyuge y a sus hijos menores de 23 años, cuando el medio de transporte demora más de cuatro horas la salida de su viaje por razones de origen natural o artificial; el medio de transporte puede ser aéreo, terrestre o marítimo y tiene que estar debidamente registrado con la autoridad de transporte y tener, además, rutas y horarios publicados. Esta protección cubre viajes de hasta sesenta días de duración. "
+                },
+                {
+                    "nombre":"Cancelación de Viaje",
+                    "descripcion":"Cubre a Ud., a su cónyuge y a sus hijos menores de 23 años, cuando tiene que cancelar un viaje hasta diez días antes de la fecha de salida por muerte u hospitalización de un familiar cercano, daños accidentales a su domicilio o su sitio de trabajo o la orden de no salida del país emitida por cualquier autoridad de su país de domicilio. Esta protección compensará los gastos que haya pre pagado con su tarjeta para disfrutar su viaje, por ejemplo, estadías, cruceros, tours o excursiones y el comercio no le reembolsó esos gastos. Esta protección cubre viajes de hasta sesenta días de duración."
+                },
+                {
+                    "nombre":"Protección de Precios",
+                    "descripcion":"Si adquirió un producto nuevo con su tarjeta y lo consiguió a un precio más bajo en menos de treinta días a partir de la fecha de compra, su protección de precios le compensará la diferencia de precio hasta por el monto indicado por artículo y por cuenta por año. La compensación se tiene que solicitar hasta cuatro días luego de haber encontrado el nuevo precio. "
+                },
+                {
+                    "nombre":"Garantía Extendida",
+                    "descripcion":"Si adquirió un producto nuevo con su tarjeta, su garantía extendida duplica o extiende el período de reparación gratuita otorgado por el fabricante original del producto, hasta por un año adicional, en productos que tengan una garantía del fabricante mínima de tres meses y hasta tres años de duración."
+                },
+                {
+                    "nombre":"Protección de Compras",
+                    "descripcion":"Si adquirió un producto nuevo con su tarjeta y el mismo es robado o sufre daños accidentales, su protección de compras puede pagar por la reparación del mismo o compensar el valor del artículo hasta cuarenta y cinco días a partir de la fecha de compra; tiene hasta treinta días para abrir el caso de reclamo."
+                },
+                {
+                    "nombre":"Pérdida de Equipaje",
+                    "descripcion":"Cubre a Ud., a su cónyuge y a sus hijos menores de 23 años, contra la pérdida del equipaje registrado en un medio de transporte en todos los tramos del viaje incluyendo el de regreso a casa; el medio de transporte puede ser aéreo, terrestre o marítimo y tiene que estar debidamente registrado con la autoridad de transporte y tener, además, rutas y horarios publicados. Esta protección cubre viajes de hasta sesenta días de duración."
+                },
+                {
+                    "nombre":"Demora de Equipaje",
+                    "descripcion":"Cubre a Ud., a su cónyuge y a sus hijos menores de 23 años, contra la demora en la entrega del equipaje registrado en un medio de transporte; esta protección comienza desde la cuarta hora de demora y le compensará por cada hora de demora para cubrir gastos adicionales de artículos de vestimenta e higiene personal que tenga que adquirir por causa de la demora de entrega del equipaje. Esta protección cubre viajes de hasta sesenta días de duración."
+                },
+                {
+                    "nombre":"Servicios de Emergencia Médica Internacional + Certificado Schengen",
+                    "descripcion":"Cobertura en caso de accidentes o emergencias médicas que ocurran mientras disfrutan de sus viajes en el extranjero, estos servicios incluyen gastos médicos, gastos dentales, gastos de recetas médicas y de transporte; protección que cubre viajes de hasta sesenta días de duración. "
+                },
+                {
+                    "nombre":"Seguro de Alquiler de Autos ",
+                    "descripcion":"Al pagar el alquiler con su tarjeta protege al vehículo alquilado contra colisión, hurto, vandalismo, incendios, accidentes parciales y accidentes totales; este seguro lo cubre a Ud., y a todos los conductores registrados en el contrato de alquiler, no tiene deducible y no tiene límite de cobertura. La reservación y el pago total del importe del alquiler tiene que hacerse con tu tarjeta Visa Infinite, esta protección cubre alquileres de hasta treint y un días de duración. "
+                },  {
+                    "nombre":"Seguro de Accidentes de Viaje en Medios de Transporte",
+                    "descripcion":"Cada vez que Usted compre con VISA INFINITE un ticket en un medio de transporte puede ser aéreo, terrestre o marítimo registrado con las autoridades de transporte, tendrá automáticamente un Seguro de Accidentes en Viajes, con una cobertura de hasta US$1.500.000 en caso de muerte accidental o desmembramiento, el seguro le cubre a usted, a su cónyuge y a sus hijos menores de 23 años."
+                }
+            ],
+            "servicios": [
+                {
+                    "nombre": "Servicio de Información para el Viajero",
+                    "funciones":[
+                        {
+                            "nombre":"Asistencia previa al viaje",
+                            "descripcion":"proporciona información sobre destinos,ubicación de cajeros automáticos, los tipos de cambio, pasaporte,visado,requisitos de salud,inmunizaciones."
+                        },
+                        {
+                            "nombre":"Asistencia durante el viaje",
+                            "descripcion":" Los agentes del Centro de Asistencia al Cliente Visa le ayudarán a activar todos los seguros y beneficios de Visa Platinum, incluyendo los servicios de emergencia médica internacional."
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Reposición de Tarjeta + Adelanto de Efectivo de Emergencia",
+                    "funciones":[
+                        {
+                            "nombre":"Reemplazo urgente de tarjetas",
+                            "descripcion":"Este servicio ayuda con el reemplazo  en caso de emergencia por robo o extravío de su tarjeta cuando se encuentra viajando internacionalmente, normalmente dentro de un plazo de un día laboral."
+                        },
+                        {
+                            "nombre":"Adelanto de efectivo de emergencia",
+                            "descripcion":"Este servicio le proporciona efectivo en unas horas en caso de emergencia mientras se encuentran viajando en el extranjero."
+                        }
+                    ]                    
+                },
+                {
+                    "nombre": "Centro de Atención de Beneficios de Tarjetas Visa",
+                    "descripcion": "Puede comunicarse con el Centro de Asistencia al Cliente Visa para solicitar servicios o beneficios usando una red mundial de números telefónicos gratuitos.",
+                    "informacion_relacionada": {
+                        "beneficios_asociados": "Los beneficios asociados a la tarjeta Visa del tarjeta habiente",
+                        "certificados_de_cobertura": "Los certificados de cobertura de seguros",
+                        "transferencia_expertos_reclamos": "Transferencia a expertos para reclamos y servicios de emergencia médica internacional",
+                        "transferencia_agentes_rewards": "Transferencia a los agentes de Visa Rewards",
+                        "transferencia_agentes_concierge": "Transferencia a los agentes de Visa Concierge",
+                        "asistencia_personal_bancos": "Asistencia al personal de las agencias bancarias y agentes del centro de atención de los bancos"
+                    }
+                },
+                {
+                    "nombre":"Asistente Personal Visa Concierge",
+                    "descripcion":"Su Asistente Personal Visa Concierge trabaja para usted las 24 horas del día, los 365 días del año para facilitarle en todos los momentos de su día",
+                    "funciones":[
+                        {
+                            "nombre":"Viajes",
+                            "contenido":["Recomendaciones y reservaciones de vuelos, hoteles, cruceros y excusiones, paseos y tours","Reservas y arreglos para alquilar vehículos (incluyendo automóviles de lujo), helicópteros y yates"]
+                        },
+                        {
+                            "nombre":"Entretenimiento y experiencias",
+                            "contenido":["Recomendaciones y reservaciones para teatros, ópera, ballet, conciertos, museos y otras actividades y eventos culturales y deportivos, restaurantes",
+                            "Información y reservas para disfrutar de la vida nocturna","Excursiones y visitas a lugares de interés",
+                            "Recomendaciones, horarios y reservas de canchas de tenis, campos de golf, gimnasios y clubes deportivos",
+                            "Información sobre los deportes especiales que se pueden practicar en el destino donde te encuentres disfrutando el viaje de sus sueños"]
+                        },
+                        {
+                            "nombre":"Servicios especiales",
+                            "contenido":["Recomendación y reserva de salones de conferencias en hoteles o centros ejecutivos","Recomendación de intérpretes y traductores",
+                            "Alquiler de equipos (computadores, teléfonos celulares, etc.)","Información sobre reglas de etiqueta y protocolo",
+                            "Referencias para obtener servicios de apoyo y seguridad","Referencias para obtener asesoría jurídica"]
+                        },
+                        {
+                            "nombre":"Regalos y compras",
+                            "contenido":["Sugerencias e ideas para regalos","Envío de arreglos florales, globos, canastas y paquetes de regalo", " Localización de artículos difíciles de encontrar (dentro de lo posible)",
+                            "Información sobre los mejores lugares para comprar","Asistencia con compras personales"]
+
+                        }
+                    ]
+
+                }
+            ],
+            "servicios_exclusivos":[
+                {
+                    "descripcion":"Pago mínimo de Consumos"
+                },
+                {
+                    "descripcion":"Débito Automático mensual de su cuenta corriente o Ahorros de AUSTROBANK"
+                },
+                {
+                    "descripcion":"Envío de Estado de Cuenta por correo electrónico gratuito"
+                },
+                {
+                    "descripcion":"Servicio gratuito de Alertas de Consumos por correo electrónico"
+                },
+                {
+                    "nombre":"Programa de Premios Austrobank Rewards",
+                    "descripcion":"Afiliación gratuita al Programa de Premios que le permite acumular 1 punto por cada B/.1.00 de consumo y puede redimir sus puntos por pasajes gratis, a cualquier lugar del mundo y en la aerolínea de su preferencia. ABO x 2: Sus puntos se duplican por cada dólar consumido en el establecimientos de categoría viajes aerolíneas, agencias de viaje y hoteles.10.000 puntos en la tarjeta platinum por haber consumido USD 20.000.  En compras en los primeros tres meses desde la entrega de su tarjeta Platinum."                    
+                },
+                {
+                    "nombre":"Programa de Premios Austrobank Rewards",
+                    "descripcion":"Afiliación gratuita al Programa de Premios que le permite acumular 1 punto por cada B/.1.00 de consumo y puede redimir sus puntos por pasajes gratis, a cualquier lugar del mundo y en la aerolínea de su preferencia. ABO x 2: Sus puntos se duplican por cada dólar consumido en el establecimientos decategoría viajes aerolíneas, agencias de viaje y hoteles. 10.000 puntos en la tarjeta platinum por haber consumido USD 20.000. en compras en los primeros tres meses desde la entrega de su tarjeta Platinum."
+                },
+                {
+                    "nombre":"Abo-flex",
+                    "descripcion":"Realice su consumo en cualquier parte del mundo y difiera hasta 36 meses con intereses a una tasa muy competitiva."
+                },
+                {
+                    "nombre":"Avances de Efectivo",
+                    "descripcion":"Realice avances de efectivo a nivel mundial en cajeros automáticos a través de la red Visa Plus."
+                },
+                {
+                    "nombre":"Call Center",
+                    "descripcion":"Realice sus consultas, requerimientos y reportes de emergencia (extravío y/o robo de tarjeta) a través de nuestra exclusiva plataforma de atención persona- lizada contactándonos al (507) 216-92000 las 24 horas del día y los 365 días de la semana."
+                },
+                {
+                    "nombre":"Web",
+                    "descripcion":"Acceda a consultar su estado de cuenta los 365 días del año. a través del enlace: http://austrobank.com/austro/banca-en-linea/."
+                },
+                {
+                    "nombre":"App visa",
+                    "descripcion":"Esta aplicación permite desde su iPhone, aprovechar al máximo todas las ventajas de su tarjeta Visa, en todo momento y en cualquier lugar del mundo.",                    
+                    "funciones":[
+                        {
+                            "nombre":"Ofertas",
+                            "descripcion":"Busca las promociones y ofertas exclusivas que más te interesan. Desde ofertas de compras, hasta restaurantes y viajes en cualquier parte del planeta."
+                        },
+                        {
+                            "nombre":"Concierge",
+                            "descripcion":"Contacta directamente al Visa Concierge y al Servicio de Asistencia Visa, a toda hora"
+                        },
+                        {
+                            "nombre":"Beneficios",
+                            "descripcion":"Accede a los beneficios y seguros que te ofrece tu tarjeta Visa."
+                        },
+                        {
+                            "nombre":"Preferencias",
+                            "descripcion":"Personaliza la app de acuerdo a tus necesidades y comodidad."
+                        }
+                    ],
+                    "Recomendaciones_seguridad":[
+                        "Al recibir su tarjeta, verifique que el sobre se encuentre totalmente sellado.","Firme su tarjeta al reverso, en caso de robo o pérdida, cualquier firma podrá ser considerada como la suya.",
+                        "No pierda de vista su tarjeta: su tarjeta debe ser devuelta al finalizar la transacción."," El robo o pérdida de su tarjeta deberá ser notificado inmediatamente vía telefónica.","Al realizar transacciones en cajeros automáticos: Memorice su clave. Asegúrese que nadie observe su clave al digitarla. No acepte ayuda de personas desconocidas. Si su tarjeta es retenida, comuníquelo de inmediato para proceder con el bloqueo.",
+                        "Recuerde que su tarjeta es personal e intransferible.","No proporcione información sensitiva (número de tarjeta, fecha de caducidad y código de seguridad) telefónicamente ni por correo electrónico.",
+                        "Cambiar las contraseñas de su cuenta de banco y sitios de   compras en línea.","Tener la precaución de mantener actualizado sus computadores y dispositivos móviles.","No realizar compras desde un café-net o desde WiFi públicos, tales como aeropuertos, centros comerciales o restaurantes.",
+                        "Tener precaución con la apertura de correo electrónico no deseado (SPAM).","Tener precaución con la apertura de los enlaces publicados en las redes sociales.","Verificar que el sitio de compras tenga SSL  (ejemplo: https://www.sitioconfiable.com) o una barra de direcciones de color verde.",
+                        "Verificar que el sitio sea de buena reputación y evitar el   ingreso de información sensible en sitios de comercio electrónico sospechoso."
+                    ]
+                }
+            ]            
+        },
+        {
+            "nombre": "VISA DÉBITO PLATINUM",
+            "descripcion":"La tarjeta de débito Visa Platinum AustroBank combina todas las ventajas de una tarjeta de débito con los beneficios de una tarjeta Visa Platinum, una tarjeta multifuncional que puede ser usada para compras en los establecimientos afiliados a VISA International, y también para retiros de efectivo en cajeros automáticos de la Red Visa/Plus a nivel mundial; es un producto asociado a una cuenta corriente o de ahorros que permite debitar los fondos directamente de la cuenta asociada al realizar transacciones, se comporta como crédito (sin PIN), en el punto de venta a nivel nacional e internacional y como tarjeta débito (con PIN), para retiros de efectivo de la cuenta asociada en cajeros automáticos, tanto a nivel local como internacional.",    
+            "proteccion":[
+                {
+                    "nombre":"Seguro de Accidentes de Viaje en Medios de Transporte",
+                    "descripcion":"Cuando paga el importe total de los boletos con su tarjeta de débito Visa Platinum usted, su cónyuge e hijos menores de 23 años que estén económicamente a su cargo cuentan con cobertura en caso de muerte o lesión accidental."
+                },
+                {
+                    "nombre":"Indemnización Médica de Emergencias en Viajes",
+                    "descripcion":"Cuando paga el importe total de los boletos con su tarjeta de débito Visa Platinum usted, su cónyuge e hijos menores de 23 años que estén económicamente a su cargo cuentan con cobertura de servicios médicos sin deducible, cuando se encuentren de viaje en el exterior."
+                },
+                {
+                    "nombre":"Seguro para Autos Alquilados",
+                    "descripcion":"Cuando usa su tarjeta de débito para reservar un vehículo y pagar el importe total del alquiler, está automáticamente cubierto por este seguro. Para ello debe rechazar la opción de Exoneración de Responsabilidad por Colisión o Pérdida (CDW/ LDW) o cobertura similar que ofrezca la compañía arrendadora en el contrato de alquiler."
+                }
+            ],
+            "services": [
+                {
+                    "nombre": "Centro de Asistencia al Cliente",
+                    "descripcion": "Desde cualquier lugar del mundo puede llamar al Centro de Asistencia de Visa Platinum y le atenderán en su idioma durante las 24 horas del día, los 365 días del año, para ayudarle con cualquier cosa que necesite, desde enviar un ramo de flores o ubicar el cajero automático más cercano, hasta enviarle una nueva tarjeta o un adelanto de efectivo de emergencia."
+                }, 
+                {
+                "nombre": "Centro de Informe de Viajes",
+                "descripcion": "Su tarjeta de débito le proporciona gratuitamente servicios de información y asistencia para que viajes con más seguridad, puede obtener información y asistencia durante las 24 horas del día, los 7 días de la semana, con sólo llamar al teléfono indicado en el reverso de su tarjeta o directamente al Centro de Asistencia de Visa Platinum."
+                },
+                {
+                    "nombre": "Reposición de Tarjeta",
+                    "descripcion": "Si su tarjeta de débito se extravía o es robada, el Centro de Asistencia de Visa Platinum, disponible las 24 horas del día, los 365 días del año, atiende amablemente su llamada en español y toma las medidas necesarias para bloquear la tarjeta extraviada o robada y protegerle del uso no autorizado de la cuenta también coordina el envío de una nueva tarjeta al lugar donde se encuentre dentro de un plazo de un día hábil en Norteamérica y fuera de Norteamérica."
+                },
+                {
+                    "nombre": "Adelanto de Efectivo de Emergencia",
+                    "descripcion":"En caso de emergencia, también puede solicitar un adelanto de efectivo contra su cuenta, sujeto a la aprobación de la transacción por su banco. El Centro de Asistencia de Visa Platinum hará los arreglos necesarios para enviarle el efectivo por el medio más rápido posible al lugar donde se encuentre."
+                }
+            ],
+            "services_exclusives": [
+                {
+                    "descripcion": "Acceso a los fondos en todo momento (límite máximo de compras US$6,000.00 por día) \n • Compras por Internet hasta $1,000.00 por día. \n• Retiros en efectivo en la red de cajeros automáticos Visa/Plus, hasta $ 500,00 diarios. \n • Servicio gratuito de Alerta de Consumos y retiros, por correo electrónico."
+                }
+            ]
+        }
+    ]
+}

@@ -1,134 +1,61 @@
-import openai
-import os
-from langchain import OpenAI
-from llama_index import (
-    SimpleDirectoryReader,
-    PromptHelper,
-    GPTVectorStoreIndex,
-    LLMPredictor,
-    StorageContext,
-    load_index_from_storage,
-    ServiceContext, SQLDatabase
-)
-import gradio as gr
+import logging
 import sys
-from flask import Flask, request
+import os
+from langchain.document_loaders import PyPDFLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.vectorstores import Chroma
+from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.chains.question_answering import load_qa_chain
+from langchain.chat_models import ChatOpenAI
+from jsonschema import Draft7Validator
+# from llama_index import GPTVectorStoreIndex
+# from llama_index import download_loader
+from flask import (Flask, redirect, render_template, request,send_from_directory, url_for)
+import json
+from flask_cors import CORS
+#from genson import SchemaBuilder
 
-from llama_index.indices.struct_store import NLSQLTableQueryEngine
-from sqlalchemy import create_engine, inspect
+def obtainJSONSchema(json_file_path):
+    with open(json_file_path, 'r') as archivo:
+        datos_json = json.load(archivo)
+    esquema = Draft7Validator(schema={})
+    for error in esquema.iter_errors(datos_json):
+        print("Error de validación:")
+        print(error.message)
+        print("Ruta del error:", list(error.path))
+    return esquema.schema
 
-db_user = ''
-db_password = ""
-db_host = ""
-db_name = ""
-db_port = ""
-# connection_uri = f"mysql+pymysql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
-connection_uri = f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+def readJsonschema(json_file_path):
+    with open(json_file_path, 'r') as archivo:
+        datos_json = json.load(archivo)
 
-# This is a sample Python script.
+def saveModel():
+    logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+    logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
+    os.environ["OPENAI_API_KEY"] = ""
+    loader = PyPDFLoader('../totalidad.pdf')
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+    data=loader.load()    
+    texts = text_splitter.split_documents(data)
+    embeddings = OpenAIEmbeddings(model='text-embedding-ada-002') 
+    docsearch = Chroma.from_documents(texts, embeddings, metadatas=[{"source": str(i)} for i in range(len(texts))],persist_directory="./model")    
 
-# os.environ['OPENAI_API_KEY'] = ''
-openai.api_key = ''
-
-# openai.api_key = ''
-# chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo",
-#                                               messages=[{"role": "user", "content": "Cual es la mejor moto del mundo"}])
-
-# print('chat_completion')
-#
-# engine = create_engine(connection_uri)
-# llm = OpenAI(
-#     openai_api_key='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',
-#     temperature=0.5,
-#     model_name="text-davinci-003",
-#     max_tokens=512,
-# )
-# service_context = ServiceContext.from_defaults(llm=llm)
-# sql_database = SQLDatabase(engine)
-# inspector = inspect(engine)
-# table_names = inspector.get_table_names()
-# print(table_names)
-
-# def chat_to_sql(question: str):
-#     query_engine = NLSQLTableQueryEngine(
-#         sql_database=sql_database,
-#         tables=table_names,
-#         synthesize_response=True,
-#         service_context=service_context
-#     )
-#     try:
-#         response = query_engine.query(question)
-#         response_md = str(response)
-#         sql = response.metadata['sql_query']
-#     except Exception as ex:
-#         response_md = 'Error'
-#         sql = f'ERROR: {str(ex)}'
-#     return response_md
-
-
-def construct_index(directory_path):
-    """
-    Construct index data from directory path.
-    :param directory_path: The path of the directory.
-    :return: A VectorStoreIndex.
-    """
-    max_input_size = 4096
-    num_outputs = 512
-    max_chunk_overlap = 1
-    chunk_size_limit = 600
-
-    prompt_helper = PromptHelper(
-        max_input_size,
-        num_outputs,
-        max_chunk_overlap,
-        chunk_size_limit
-    )
-    llm_predictor = LLMPredictor(
-        llm=OpenAI(
-            openai_api_key='',
-            temperature=0.5,
-            model_name="text-davinci-003",
-            max_tokens=num_outputs,
-        )
-    )
-
-    documents = SimpleDirectoryReader(directory_path).load_data()
-
-    index = GPTVectorStoreIndex(
-        documents,
-        llm_predictor=llm_predictor,
-        prompt_helper=prompt_helper
-    )
-    index.storage_context.persist(persist_dir='docs/index.json')
-    return index
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-def chatbot(input_text):
-    storage_context = StorageContext.from_defaults(persist_dir='docs/index.json')
-    index = load_index_from_storage(storage_context)
-    response = index.as_query_engine()
-    return response.query(input_text).response
-
-
-# iface = gr.Interface(fn=chatbot,
- #                    inputs=gr.inputs.Textbox(lines=3, label="Enter your text"),
-  #                  outputs="text",
- #                    title="My AI Chatbot")
-
-# construct_index("docs")
-#iface.launch(share=True)
-
-# print(construct_index('docs'))
-
+def queryModel(question):    
+    os.environ["OPENAI_API_KEY"] = ""
+    db3 = Chroma(persist_directory="./model",embedding_function=OpenAIEmbeddings(model='text-embedding-ada-002'))
+    docs = db3.similarity_search(question)
+    chain = load_qa_chain(ChatOpenAI(temperature=0.2,model_name='gpt-3.5-turbo',max_tokens=1000), 
+                        chain_type="stuff")    
+    response=chain.run(input_documents=docs, question=question)
+    return response
+#saveModel()
 app = Flask(__name__)
-
+CORS(app)
 
 @app.route('/bot-question', methods=['POST'])
 def response_question():
-    question = request.get_json()
-    return chatbot(question['question'])
+   question = request.get_json()
+   return queryModel(question['question'])
+
+if __name__ == '__main__':
+   app.run(host='0.0.0.0',port=5000)

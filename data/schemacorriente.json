@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "servicio": {
+      "type": "object",
+      "properties": {
+        "nombre": {
+          "type": "string"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "beneficiarios": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "nombre": {
+                "type": "string"
+              },
+              "descipcion": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "nombre",
+              "descipcion"
+            ]
+          }
+        },
+        "beneficios": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "nombre": {
+                "type": "string"
+              },
+              "descripcion": {
+                "type": "string"
+              },
+              "descipcion": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "nombre"
+            ]
+          }
+        }
+      },
+      "required": [
+        "nombre",
+        "descripcion",
+        "beneficiarios",
+        "beneficios"
+      ]
+    }
+  },
+  "required": [
+    "servicio"
+  ]
+}

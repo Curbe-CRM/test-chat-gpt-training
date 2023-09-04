@@ -1,0 +1,191 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "tarjeta": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "proteccion": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "nombre": {
+                  "type": "string"
+                },
+                "descripcion": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "nombre",
+                "descripcion"
+              ]
+            }
+          },
+          "servicios": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "nombre": {
+                  "type": "string"
+                },
+                "funciones": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "nombre": {
+                        "type": "string"
+                      },
+                      "contenido": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "descripcion": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "nombre"
+                    ]
+                  }
+                },
+                "descripcion": {
+                  "type": "string"
+                },
+                "informacion_relacionada": {
+                  "type": "object",
+                  "properties": {
+                    "beneficios_asociados": {
+                      "type": "string"
+                    },
+                    "certificados_de_cobertura": {
+                      "type": "string"
+                    },
+                    "transferencia_expertos_reclamos": {
+                      "type": "string"
+                    },
+                    "transferencia_agentes_rewards": {
+                      "type": "string"
+                    },
+                    "transferencia_agentes_concierge": {
+                      "type": "string"
+                    },
+                    "asistencia_personal_bancos": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "beneficios_asociados",
+                    "certificados_de_cobertura",
+                    "transferencia_expertos_reclamos",
+                    "transferencia_agentes_rewards",
+                    "transferencia_agentes_concierge",
+                    "asistencia_personal_bancos"
+                  ]
+                }
+              },
+              "required": [
+                "nombre"
+              ]
+            }
+          },
+          "servicios_exclusivos": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "descripcion": {
+                  "type": "string"
+                },
+                "nombre": {
+                  "type": "string"
+                },
+                "funciones": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "nombre": {
+                        "type": "string"
+                      },
+                      "descripcion": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "nombre",
+                      "descripcion"
+                    ]
+                  }
+                },
+                "Recomendaciones_seguridad": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "descripcion"
+              ]
+            }
+          },
+          "services": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "nombre": {
+                  "type": "string"
+                },
+                "descripcion": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "nombre",
+                "descripcion"
+              ]
+            }
+          },
+          "services_exclusives": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "descripcion": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "descripcion"
+              ]
+            }
+          }
+        },
+        "required": [
+          "nombre",
+          "descripcion",
+          "proteccion"
+        ]
+      }
+    }
+  },
+  "required": [
+    "tarjeta"
+  ]
+}
