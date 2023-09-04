@@ -47,7 +47,18 @@ def queryModel(question):
     chain = load_qa_chain(ChatOpenAI(temperature=0.2,model_name='gpt-3.5-turbo',max_tokens=1000), 
                         chain_type="stuff")    
     response=chain.run(input_documents=docs, question=question)
-    return response
+    responseObj={
+        "ref_number_client": "593967585156",
+    "ref_number_company": "593967916241",
+    "ref_user_name": "Stalin Figueroa",
+    "ref_type": "text",
+    "ref_data": {
+        "ref_payload": None,
+        "ref_text": response
+    },
+    "ref_date": "2022-11-21T00:24:36.000Z"
+    }
+    return responseObj
 #saveModel()
 app = Flask(__name__)
 CORS(app)
