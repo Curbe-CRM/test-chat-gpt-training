@@ -17,3 +17,5 @@ Trianing GTP Chatbot test. Data from PDFs,JSON.
 - flask
 - flask_core
 - jsonschema
+#### Commands
+flask --app main.py run --host:0.0.0.0 --port=5000
