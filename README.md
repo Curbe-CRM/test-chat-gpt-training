@@ -1,6 +1,6 @@
 # Test-Chatbot-Gpt-Training
 Trianing GTP Chatbot test. Data from PDFs,JSON.
-# Requirements
+## PIP Requirements
 - numpy==1.24.4
 - openai[embeddings]==0.27.6
 - fsspec==2023.4.0
@@ -17,5 +17,11 @@ Trianing GTP Chatbot test. Data from PDFs,JSON.
 - flask
 - flask_core
 - jsonschema
-#### Commands
+## OS Requirements
+- libpq-dev
+- build-essential
+- git
+- conda
+- python==3.8
+## Commands
 flask --app main.py run --host=0.0.0.0 --port=5000
