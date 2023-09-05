@@ -1,7 +1,7 @@
 import logging
 import sys
 import os
-from langchain.document_loaders import (PyPDFLoader,JSONLoader)
+from langchain.document_loaders import (PyPDFLoader,JSONLoader,CSVLoader)
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import Chroma
 from langchain.embeddings.openai import OpenAIEmbeddings
@@ -16,7 +16,7 @@ from flask_cors import CORS
 
 def saveModelJSON():
     os.environ["OPENAI_API_KEY"] = ""
-    loader = JSONLoader('data/cntCrrnt.json','servicio')
+    loader = CSVLoader('data/convertcsv.csv')
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
     data=loader.load()    
     texts = text_splitter.split_documents(data)
