@@ -30,8 +30,8 @@ from llama_index.readers.file.base import SimpleDirectoryReader
 
 
 
-os.environ['OPENAI_API_KEY'] = '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'
-openai.api_key = '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'
+os.environ['OPENAI_API_KEY'] = ''
+openai.api_key = ''
 
 # openai.api_key = ''
 # chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo",
@@ -88,7 +88,7 @@ def construct_index(directory_path):
     )
     llm_predictor = LLMPredictor(
         llm=ChatOpenAI(
-            openai_api_key='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',
+            openai_api_key='',
             temperature=0.5,
             model_name="gpt-3.5",
             max_tokens=num_outputs,
