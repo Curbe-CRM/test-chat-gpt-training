@@ -1,7 +1,7 @@
 import logging
 import sys
 import os
-from langchain.document_loaders import PyPDFLoader
+from langchain.document_loaders import (PyPDFLoader,JSONLoader)
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import Chroma
 from langchain.embeddings.openai import OpenAIEmbeddings
@@ -13,21 +13,15 @@ from jsonschema import Draft7Validator
 from flask import (Flask, redirect, render_template, request,send_from_directory, url_for)
 import json
 from flask_cors import CORS
-#from genson import SchemaBuilder
 
-def obtainJSONSchema(json_file_path):
-    with open(json_file_path, 'r') as archivo:
-        datos_json = json.load(archivo)
-    esquema = Draft7Validator(schema={})
-    for error in esquema.iter_errors(datos_json):
-        print("Error de validación:")
-        print(error.message)
-        print("Ruta del error:", list(error.path))
-    return esquema.schema
-
-def readJsonschema(json_file_path):
-    with open(json_file_path, 'r') as archivo:
-        datos_json = json.load(archivo)
+def saveModelJSON():
+    os.environ["OPENAI_API_KEY"] = ""
+    loader = JSONLoader('data/cntCrrnt.json','servicio')
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+    data=loader.load()    
+    texts = text_splitter.split_documents(data)
+    embeddings = OpenAIEmbeddings(model='text-embedding-ada-002') 
+    docsearch = Chroma.from_documents(texts, embeddings, metadatas=[{"source": str(i)} for i in range(len(texts))],persist_directory="./model")
 
 def saveModel():
     logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
