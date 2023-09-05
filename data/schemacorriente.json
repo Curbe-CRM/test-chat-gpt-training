@@ -4,59 +4,229 @@
   "type": "object",
   "properties": {
     "servicio": {
-      "type": "object",
-      "properties": {
-        "nombre": {
-          "type": "string"
-        },
-        "descripcion": {
-          "type": "string"
-        },
-        "beneficiarios": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "nombre": {
-                "type": "string"
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "beneficiarios": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "nombre": {
+                  "type": "string"
+                },
+                "descipcion": {
+                  "type": "string"
+                }
               },
-              "descipcion": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "nombre",
-              "descipcion"
-            ]
+              "required": [
+                "nombre",
+                "descipcion"
+              ]
+            }
+          },
+          "beneficios": {
+            "type": "array",
+            "items": {}
+          },
+          "tipo": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "nombre": {
+                  "type": "string"
+                },
+                "proveedores": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "nombre": {
+                        "type": "string"
+                      },
+                      "tarjeta": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "nombre": {
+                              "type": "string"
+                            },
+                            "descripcion": {
+                              "type": "string"
+                            },
+                            "beneficios": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "nombre": {
+                                    "type": "string"
+                                  },
+                                  "condicion": {
+                                    "type": "string"
+                                  },
+                                  "contenido": {
+                                    "type": "string"
+                                  },
+                                  "descripcion": {
+                                    "type": "string"
+                                  },
+                                  "funciones": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "nombre": {
+                                          "type": "string"
+                                        },
+                                        "contenido": {
+                                          "type": "array",
+                                          "items": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "descripcion": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "nombre"
+                                      ]
+                                    }
+                                  },
+                                  "informacion_relacionada": {
+                                    "type": "object",
+                                    "properties": {
+                                      "beneficios_asociados": {
+                                        "type": "string"
+                                      },
+                                      "certificados_de_cobertura": {
+                                        "type": "string"
+                                      },
+                                      "transferencia_expertos_reclamos": {
+                                        "type": "string"
+                                      },
+                                      "transferencia_agentes_rewards": {
+                                        "type": "string"
+                                      },
+                                      "transferencia_agentes_concierge": {
+                                        "type": "string"
+                                      },
+                                      "asistencia_personal_bancos": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "beneficios_asociados",
+                                      "certificados_de_cobertura",
+                                      "transferencia_expertos_reclamos",
+                                      "transferencia_agentes_rewards",
+                                      "transferencia_agentes_concierge",
+                                      "asistencia_personal_bancos"
+                                    ]
+                                  }
+                                },
+                                "required": []
+                              }
+                            },
+                            "beneficios_visa": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "nombre": {
+                                    "type": "string"
+                                  },
+                                  "descripcion": {
+                                    "type": "string"
+                                  },
+                                  "contenido": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": []
+                              }
+                            },
+                            "proteccion": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "nombre": {
+                                    "type": "string"
+                                  },
+                                  "descripcion": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "nombre",
+                                  "descripcion"
+                                ]
+                              }
+                            },
+                            "condiciones": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "nombre",
+                            "descripcion",
+                            "beneficios",
+                            "proteccion"
+                          ]
+                        }
+                      }
+                    },
+                    "required": [
+                      "nombre",
+                      "tarjeta"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "nombre",
+                "proveedores"
+              ]
+            }
+          },
+          "funciones": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "nombre": {
+                  "type": "string"
+                },
+                "ventajas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "nombre",
+                "ventajas"
+              ]
+            }
           }
         },
-        "beneficios": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "nombre": {
-                "type": "string"
-              },
-              "descripcion": {
-                "type": "string"
-              },
-              "descipcion": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "nombre"
-            ]
-          }
-        }
-      },
-      "required": [
-        "nombre",
-        "descripcion",
-        "beneficiarios",
-        "beneficios"
-      ]
+        "required": [
+          "nombre",
+          "descripcion"
+        ]
+      }
     }
   },
   "required": [
