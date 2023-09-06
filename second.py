@@ -88,7 +88,7 @@ def construct_index(directory_path):
     )
     llm_predictor = LLMPredictor(
         llm=ChatOpenAI(
-            openai_api_key='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',
+            openai_api_key='',
             temperature=1,
             model_name="gpt-3.5",
             max_tokens=num_outputs,

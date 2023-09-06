@@ -14,7 +14,7 @@ import json
 from flask_cors import CORS
 
 def saveModelDoc():
-    os.environ["OPENAI_API_KEY"] = "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"
+    os.environ["OPENAI_API_KEY"] = ""
     loader = TextLoader('data/indice/serviciosdetalle.txt')
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
     data=loader.load()    
@@ -35,7 +35,7 @@ def saveModel():
     docsearch = Chroma.from_documents(texts, embeddings, metadatas=[{"source": str(i)} for i in range(len(texts))],persist_directory="./model")    
 
 def queryModel(question):    
-    os.environ["OPENAI_API_KEY"] = "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"
+    os.environ["OPENAI_API_KEY"] = ""
     db3 = Chroma(persist_directory="./model",embedding_function=OpenAIEmbeddings(model='text-embedding-ada-002'))
     docs = db3.similarity_search(question)
     chain = load_qa_chain(ChatOpenAI(temperature=1,model_name='gpt-3.5-turbo',max_tokens=1000), 
