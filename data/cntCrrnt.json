@@ -6,11 +6,11 @@
         "beneficiarios":[
             {
                 "nombre":"Personas Naturales",
-                "descipcion":"Una Persona Natural es una persona humana que ejerce derechos y cumple obligaciones a título personal."
+                "descripcion":"Una Persona Natural es una persona humana que ejerce derechos y cumple obligaciones a título personal."
             },
             {
                 "nombre":"Personas Juridicas",
-                "descipcion":"Una Persona Jurídica es una empresa que ejerce sus propios derechos y cumple sus propias obligaciones."
+                "descripcion":"Una Persona Jurídica es una empresa que ejerce sus propios derechos y cumple sus propias obligaciones."
             }
         ],
         "beneficios":[
@@ -60,11 +60,11 @@
             },
             {
                 "nombre":"Seguridad en sus transacciones",
-                "descipcion":"Seguridad de transacciones por medio del envío de confirmaciones vía correos electrónicos."
+                "descripcion":"Seguridad de transacciones por medio del envío de confirmaciones vía correos electrónicos."
             },
             {
                 "nombre":"Sobregiros Ocasionales",
-                "descipcion":"Sobregiros Ocasionales para solucionar tus necesidades inmediatas"
+                "descripcion":"Sobregiros Ocasionales para solucionar tus necesidades inmediatas"
             }
         ]
 

@@ -30,8 +30,8 @@ from llama_index.readers.file.base import SimpleDirectoryReader
 
 
 
-os.environ['OPENAI_API_KEY'] = ''
-openai.api_key = ''
+os.environ['OPENAI_API_KEY'] = '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'
+openai.api_key = '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'
 
 # openai.api_key = ''
 # chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo",
@@ -75,7 +75,7 @@ def construct_index(directory_path):
     :param directory_path: The path of the directory.
     :return: A VectorStoreIndex.
     """
-    max_input_size = 4096
+    max_input_size = 600
     num_outputs = 60
     max_chunk_overlap = 0
     chunk_size_limit = 600
@@ -88,8 +88,8 @@ def construct_index(directory_path):
     )
     llm_predictor = LLMPredictor(
         llm=ChatOpenAI(
-            openai_api_key='',
-            temperature=0.5,
+            openai_api_key='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',
+            temperature=1,
             model_name="gpt-3.5",
             max_tokens=num_outputs,
         )
@@ -148,7 +148,7 @@ def mongoRead():
     
 #mongoRead()
 
-#construct_index("docs")
+#construct_index("data/indice")
 
 app = Flask(__name__)
 
