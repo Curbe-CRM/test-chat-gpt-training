@@ -53,13 +53,13 @@ def queryModel(question):
     # "ref_date": "2022-11-21T00:24:36.000Z"
     # }
     return response
-saveModelDoc()
-# app = Flask(__name__)
-# CORS(app)
-# @app.route('/bot-question', methods=['POST'])
-# def response_question():
-#     question = request.get_json()
-#     return queryModel(question['question'])
+#saveModelDoc()
+app = Flask(__name__)
+CORS(app)
+@app.route('/bot-question', methods=['POST'])
+def response_question():
+    question = request.get_json()
+    return queryModel(question['question'])
 
-# if __name__ == '__main__':
-#     app.run(host='0.0.0.0',port=5000)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0',port=5000)
