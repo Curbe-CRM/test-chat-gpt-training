@@ -42,9 +42,9 @@ def queryModel(question):
                         chain_type="stuff")    
     response=chain.run(input_documents=docs, question=question)
     # responseObj={
-    #     "ref_number_client": "593967585156",
-    # "ref_number_company": "593967916241",
-    # "ref_user_name": "Stalin Figueroa",
+    #     "ref_number_client": "",
+    # "ref_number_company": "",
+    # "ref_user_name": "",
     # "ref_type": "text",
     # "ref_data": {
     #     "ref_payload": None,
