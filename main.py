@@ -13,47 +13,39 @@ from flask import (Flask, redirect, render_template, request,send_from_directory
 import json
 from flask_cors import CORS
 
-def saveModelDoc():
-    os.environ["OPENAI_API_KEY"] = ""
-    loader = TextLoader('data/indice/serviciosdetalle.txt')
+#logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+#logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
+os.environ["OPENAI_API_KEY"] = "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"
+
+def saveModelDoc(filepath):    
+    loader = TextLoader(filepath)
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
     data=loader.load()    
-    texts = text_splitter.split_documents(data)
-    print(texts[1])
-    # embeddings = OpenAIEmbeddings(model='text-embedding-ada-002')    
-    # Chroma.from_documents(texts, embeddings,persist_directory="./model")
+    texts = text_splitter.split_documents(data)    
+    embeddings = OpenAIEmbeddings(model='text-embedding-ada-002')    
+    Chroma.from_documents(texts, embeddings,persist_directory="./model")
 
-def saveModel():
-    logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
-    logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
-    os.environ["OPENAI_API_KEY"] = ""
-    loader = PyPDFLoader('../totalidad.pdf')
+def saveModelPdf(filepath):
+    loader = PyPDFLoader(filepath)
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
     data=loader.load()    
     texts = text_splitter.split_documents(data)
     embeddings = OpenAIEmbeddings(model='text-embedding-ada-002') 
-    docsearch = Chroma.from_documents(texts, embeddings, metadatas=[{"source": str(i)} for i in range(len(texts))],persist_directory="./model")    
+    Chroma.from_documents(texts, embeddings,persist_directory="./model")
+    
 
-def queryModel(question):    
-    os.environ["OPENAI_API_KEY"] = ""
+def queryModel(question):        
     db3 = Chroma(persist_directory="./model",embedding_function=OpenAIEmbeddings(model='text-embedding-ada-002'))
     docs = db3.similarity_search(question)
     chain = load_qa_chain(ChatOpenAI(temperature=1,model_name='gpt-3.5-turbo',max_tokens=1000), 
                         chain_type="stuff")    
-    response=chain.run(input_documents=docs, question=question)
-    # responseObj={
-    #     "ref_number_client": "",
-    # "ref_number_company": "",
-    # "ref_user_name": "",
-    # "ref_type": "text",
-    # "ref_data": {
-    #     "ref_payload": None,
-    #     "ref_text": response
-    # },
-    # "ref_date": "2022-11-21T00:24:36.000Z"
-    # }
+    response=chain.run(input_documents=docs, question=question)    
     return response
-#saveModelDoc()
+
+# saveModelDoc('data/indice/serviciosdetalle.txt')
+# saveModelPdf('data/tarifario/TARIFARIO-TASA-ABO-21AGO2023.pdf')
+# saveModelPdf('data/tarifario/TARIFARIO-ABO-21JUL2023.pdf')
+
 app = Flask(__name__)
 CORS(app)
 @app.route('/bot-question', methods=['POST'])

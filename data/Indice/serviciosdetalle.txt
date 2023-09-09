@@ -1,3 +1,23 @@
+Austrobank
+Más de 25 años creciendo contigo
+Misión
+Ofrecer productos financieros orientados a las necesidades específicas de nuestros clientes, mediante soluciones agiles y personalizadas
+Visión
+Ser un Banco sólido con proyección internacional y crecimiento sostenido. Con Tecnología de punta y un modelo operativo eficaz, transparente, confiable, con altos estándares de gobierno corporativo y respaldado por un capital humano competente y comprometido.
+Valores
+1.	Moral y Ética
+2.	Integridad
+3.	Confidencialidad
+4.	Respeto
+5.	Profesionalismo
+6.	Responsabilidad
+7.	Proactividad
+Regulaciones
+Entidad regulada y supervisada por Superintendencia de Bancos de Panamá
+Contactos
+Dirección: Calle 53 Este, Marbella. Edificio Humboldt Tower, Planta Baja
+Correo: contactanos@austrobank.com
+Teléfono: +507 223-4455
 Servicios
 1.	Cuenta ahorros
 2.	Cuenta corriente
@@ -98,3 +118,10 @@ Depósitos a plazos
 o	Permite rentabilizar el dinero que no requieras movilizar de forma inmediata.
 o	Genera intereses calculados a una tasa fija que serán abonados al vencimiento del periodo contratado.
 o	Puedes reinvertir los intereses o abonarlos a la cuenta
+Banca en línea
+Instrucciones Ingreso:
+1.	Ingresar a  www.austrobank.net
+2.	Ingrese en el campo USUARIO con lo cual se habilita el botón de Siguiente.
+a.	Si el nombre de usuario se ingresa correctamente, se presentará la pantalla de la contraseña con la imagen anti-phishing seleccionada en el registro de usuario.
+3.	Al hacer clic en el botón Siguiente, el sistema le solicitará el Token enviado al correo electrónico.
+a.	Si el Token es el correcto, el usuario puede ingresar a los servicios de Home Banking.
