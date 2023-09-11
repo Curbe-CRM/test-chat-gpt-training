@@ -39,8 +39,13 @@ def queryModel(question):
     docs = db3.similarity_search(question)
     chain = load_qa_chain(ChatOpenAI(temperature=1,model_name='gpt-3.5-turbo',max_tokens=1000), 
                         chain_type="stuff")    
-    response=chain.run(input_documents=docs, question=question)    
-    return response
+    response=chain.run(input_documents=docs, question=question)
+    responseObj={
+        'data':{
+            'content':response
+        }
+    }
+    return responseObj
 
 # saveModelDoc('data/indice/serviciosdetalle.txt')
 # saveModelPdf('data/tarifario/TARIFARIO-TASA-ABO-21AGO2023.pdf')
