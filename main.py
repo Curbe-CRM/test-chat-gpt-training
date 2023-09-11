@@ -15,7 +15,7 @@ from flask_cors import CORS
 
 #logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 #logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = ""
 
 def saveModelDoc(filepath):    
     loader = TextLoader(filepath)
