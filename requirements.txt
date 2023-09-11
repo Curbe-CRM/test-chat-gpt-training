@@ -12,6 +12,6 @@ unstructured==0.6.2
 chromadb==0.3.21
 llama-index==0.6.1
 flask
-flask_core
+flask_cors
 jsonschema
 
