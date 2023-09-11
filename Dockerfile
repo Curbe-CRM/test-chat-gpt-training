@@ -1,7 +1,9 @@
 From python:3.8
 
 # environment variable 
-ENV DockerHOME=/home/app/report
+ENV DockerHOME=/home/app/api
+ENV OPENAI_API_KEY='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'
+
 
 # directory to work
 RUN mkdir -p $DockerHOME  
@@ -24,7 +26,23 @@ RUN apt-get install -y build-essential
 RUN apt-get install -y libpq-dev
 run apt --fix-broken install
 COPY . $DockerHOME
-RUN pip install -r requirements.txt
+RUN pip install numpy==1.24.4
+RUN pip install openai[embeddings]==0.27.6
+RUN pip install fsspec==2023.4.0
+RUN pip install FuzzyTM==2.0.5
+RUN pip install blosc2~=2.0.0
+RUN pip install cython>=3.0.2
+RUN pip install langchain==0.0.279
+RUN pip install pypdf==3.8.1
+RUN pip install tiktoken==0.3.3
+RUN pip install faiss-cpu==1.7.4
+RUn pip install unstructured==0.6.2
+RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+RUN pip install chromadb==0.3.21
+RUN pip install llama-index==0.6.1
+RUN pip install flask
+RUN pip install flask_cors
+RUN pip install jsonschema
 ARG port=5000
 EXPOSE $port:$port
 CMD ["flask", "--app", "main.py", "run","--host=0.0.0.0","--port=5000"]
