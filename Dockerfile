@@ -2,8 +2,6 @@ From python:3.8
 
 # environment variable 
 ENV DockerHOME=/home/app/api
-ENV OPENAI_API_KEY='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'
-
 
 # directory to work
 RUN mkdir -p $DockerHOME  
@@ -43,6 +41,7 @@ RUN pip install llama-index==0.6.1
 RUN pip install flask
 RUN pip install flask_cors
 RUN pip install jsonschema
+RUN pip install flask-jwt-extended
 ARG port=5000
 EXPOSE $port:$port
 CMD ["flask", "--app", "main.py", "run","--host=0.0.0.0","--port=5000"]
