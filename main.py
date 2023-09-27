@@ -16,34 +16,35 @@ from flask_cors import CORS
 import openai
 from werkzeug.datastructures import ImmutableMultiDict
 
-logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
-logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
+#logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+#logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
+os.environ["OPENAI_API_KEY"] = ""
 
 trsted_proxies=('localhost:4200')
 
-def saveModelDoc(filepath):    
+def saveModelDoc(filepath):
     loader = TextLoader(filepath)
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-    data=loader.load()    
-    texts = text_splitter.split_documents(data)    
-    embeddings = OpenAIEmbeddings(model='text-embedding-ada-002')    
+    data=loader.load()
+    texts = text_splitter.split_documents(data)
+    embeddings = OpenAIEmbeddings(model='text-embedding-ada-002')
     Chroma.from_documents(texts, embeddings,persist_directory="./model")
 
 def saveModelPdf(filepath):
     loader = PyPDFLoader(filepath)
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-    data=loader.load()    
+    data=loader.load()
     texts = text_splitter.split_documents(data)
-    embeddings = OpenAIEmbeddings(model='text-embedding-ada-002') 
+    embeddings = OpenAIEmbeddings(model='text-embedding-ada-002')
     Chroma.from_documents(texts, embeddings,persist_directory="./model")
     
 
-def queryModel(question):        
+def queryModel(question):
     db3 = Chroma(persist_directory="./model",embedding_function=OpenAIEmbeddings(model='text-embedding-ada-002'))
     docs = db3.similarity_search(question)
-    chain = load_qa_chain(ChatOpenAI(temperature=1,model_name='gpt-3.5-turbo',max_tokens=1000), 
-                        chain_type="stuff")    
+    chain = load_qa_chain(ChatOpenAI(temperature=0.1,model_name='gpt-3.5-turbo',max_tokens=1000), 
+                        chain_type="stuff")
     response=chain.run(input_documents=docs, question=question)
     responseObj={
         'data':{
@@ -58,7 +59,7 @@ def saveFile(request):
     audio.save(path)
     return speechText(path)
 
-def speechText(file):    
+def speechText(file):
     audio_file= open(file, "rb")
     openai.api_key=os.environ["OPENAI_API_KEY"]
     transcript = openai.Audio.transcribe("whisper-1", audio_file)
@@ -71,19 +72,19 @@ def speechText(file):
 # saveModelDoc('data/pdfs.txt')
 
 app = Flask(__name__)
-app.config["JWT_SECRET_KEY"] = "jtISz88zZHtS3vW/uFJB3pD7Mp21fiFeUC7KUdFRKN972An2kGyHmWQIhmitMt5fS4sOQAm3HJRjVY0IIkkG31"
+app.config["JWT_SECRET_KEY"] = ""
 jwt = JWTManager(app)
 CORS(app)
 
 @app.route('/bot-question', methods=['POST'])
 @jwt_required()
 def response_question():
-    question = request.get_json()    
+    question = request.get_json()
     return queryModel(question['question'])
 
 @app.route('/get-audio', methods=['POST'])
 @jwt_required()
-def get_audio():    
+def get_audio():
     responseObj={
         'data':{
             'content':saveFile(request)
