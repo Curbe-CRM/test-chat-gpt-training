@@ -35,13 +35,14 @@ RUN pip install pypdf==3.8.1
 RUN pip install tiktoken==0.3.3
 RUN pip install faiss-cpu==1.7.4
 RUn pip install unstructured==0.6.2
-RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+RUN pip install torch --index-url https://download.pytorch.org/whl/cpu
 RUN pip install chromadb==0.3.21
 RUN pip install llama-index==0.6.1
 RUN pip install flask
 RUN pip install flask_cors
 RUN pip install jsonschema
 RUN pip install flask-jwt-extended
+RUN pip install psycopg2
 ARG port=5000
 EXPOSE $port:$port
 CMD ["flask", "--app", "main.py", "run","--host=0.0.0.0","--port=5000"]
