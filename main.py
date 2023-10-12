@@ -14,12 +14,22 @@ from flask_cors import CORS
 import openai
 from werkzeug.datastructures import ImmutableMultiDict
 import psycopg2
+from langdetect import detect
+from langdetect import detect_langs
 
-logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
-logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
+# logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+# logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
+
+# os.environ["OPENAI_API_KEY"] = "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"
+# os.environ["JWT_SECRET_KEY"] = "jtISz88zZHtS3vW/uFJB3pD7Mp21fiFeUC7KUdFRKN972An2kGyHmWQIhmitMt5fS4sOQAm3HJRjVY0IIkkG31"
+# os.environ["CONN_DB"] = 'vuhiloqb'
+# os.environ["CONN_USER"] = 'vuhiloqb'
+# os.environ["CONN_PASWD"] = 'QHIB189WQ1mqgDjvlbhMQPrml8zDMSYb'
+# os.environ["CONN_HOST"] = 'otto.db.elephantsql.com'
+# os.environ["CONN_PORT"] = '5432'
 
 def saveModelDoc(filepath):
-    loader = TextLoader(filepath)
+    loader = TextLoader(filepath,encoding='utf8')
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
     data=loader.load()
     texts = text_splitter.split_documents(data)
@@ -34,12 +44,21 @@ def saveModelPdf(filepath):
     embeddings = OpenAIEmbeddings(model='text-embedding-ada-002')
     Chroma.from_documents(texts, embeddings,persist_directory="./model")    
 
-def queryModel(question):
-    db3 = Chroma(persist_directory="./model",embedding_function=OpenAIEmbeddings(model='text-embedding-ada-002'))
-    docs = db3.similarity_search(question)
-    chain = load_qa_chain(ChatOpenAI(temperature=0.1,model_name='gpt-3.5-turbo',max_tokens=1000), 
-                        chain_type="stuff")
-    response=chain.run(input_documents=docs, question=question)    
+def queryModel(question,language):
+    detectado=detect(question)    
+    if(detectado==language):
+        db3 = Chroma(persist_directory="./model",embedding_function=OpenAIEmbeddings(model='text-embedding-ada-002'))
+        docs = db3.similarity_search(question)
+        chain = load_qa_chain(ChatOpenAI(temperature=0.1,model_name='gpt-3.5-turbo',max_tokens=1000), 
+                            chain_type="stuff")
+        response=chain.run(input_documents=docs, question=question)
+    else:
+        if(language=="es"):
+            response="Lo siento no entiendo este mensaje, intentalo en Español. O intenta otra frase"
+        elif(language=="en"):
+            response="Sorry I don't understand this message, Try in English or other phrase"
+        else: 
+            response="Language unknown"
     return response
 
 def saveFileAudio(request):
@@ -137,7 +156,7 @@ def actualizar_fondo(tabla, columna_condicion, valor_condicion, nuevos_valores):
             password=os.environ['CONN_PASWD'],
             host=os.environ['CONN_HOST'],
             port=os.environ['CONN_PORT']
-        )        
+        )       
         cursor = conn.cursor()        
         consulta = f"UPDATE {tabla} SET "
         for columna, nuevo_valor in nuevos_valores.items():
@@ -213,6 +232,11 @@ def actualizarColor(id,est_color_prin_color,est_color_sec_color,est_color_ter_co
     resultados=actualizar_fondo(tabla=tabla,columna_condicion=columna_condicion,valor_condicion=valor_condicion,nuevos_valores=nuevosvalores)
     return resultados
 
+# saveModelDoc('data/Indice/serviciosdetalle.txt')
+# saveModelDoc('data/pdfs.txt')
+# saveModelPdf('data/tarifario/TARIFARIO-ABO-21JUL2023.pdf')
+# saveModelPdf('data/tarifario/TARIFARIO-TASA-ABO-21AGO2023.pdf')
+
 app = Flask(__name__)
 app.config["JWT_SECRET_KEY"] = os.environ["JWT_SECRET_KEY"]
 jwt = JWTManager(app)
@@ -221,8 +245,8 @@ CORS(app)
 @app.route('/bot-question', methods=['POST'])
 @jwt_required()
 def response_question():
-    question = request.get_json()
-    return jsonify(queryModel(question['question']))
+    question = request.get_json()    
+    return jsonify(queryModel(question['question'],question["language"]))
 
 @app.route('/get-audio', methods=['POST'])
 @jwt_required()
@@ -291,8 +315,6 @@ def verify_auth():
         return jsonify(resultado)
     else:
         abort(403)
-
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port=5000)

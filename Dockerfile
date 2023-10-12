@@ -43,6 +43,7 @@ RUN pip install flask_cors
 RUN pip install jsonschema
 RUN pip install flask-jwt-extended
 RUN pip install psycopg2
+RUN pip install langdetect
 ARG port=5000
 EXPOSE $port:$port
 CMD ["flask", "--app", "main.py", "run","--host=0.0.0.0","--port=5000"]

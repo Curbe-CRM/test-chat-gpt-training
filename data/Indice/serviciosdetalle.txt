@@ -1,9 +1,12 @@
 Austrobank
 Más de 25 años creciendo contigo
+
 Misión
 Ofrecer productos financieros orientados a las necesidades específicas de nuestros clientes, mediante soluciones agiles y personalizadas
+
 Visión
 Ser un Banco sólido con proyección internacional y crecimiento sostenido. Con Tecnología de punta y un modelo operativo eficaz, transparente, confiable, con altos estándares de gobierno corporativo y respaldado por un capital humano competente y comprometido.
+
 Valores
 1.	Moral y Ética
 2.	Integridad
@@ -12,12 +15,35 @@ Valores
 5.	Profesionalismo
 6.	Responsabilidad
 7.	Proactividad
+
 Regulaciones
 Entidad regulada y supervisada por Superintendencia de Bancos de Panamá
+
 Contactos
 Dirección: Calle 53 Este, Marbella. Edificio Humboldt Tower, Planta Baja
 Correo: contactanos@austrobank.com
 Teléfono: +507 223-4455
+
+JUNTA DIRECTIVA
+Luis Alberto Della Togna Arcia:DIRECTOR-PRESIDENTE
+Rosa Elena Jativa Cadena:DIRECTOR-SECRETARIA
+Miguel Angel Kerbes:DIRECTOR-INDEPENDIENTE
+Martha Luna:DIRECTOR-INDEPENDIENTE
+Sara Wendy Rodriguez:DIRECTOR-TESORERO
+Maria De Los Angeles Roman:DIRECTOR
+Juan Carlos Gallegos:DIRECTOR-INDEPENDIENTE
+Alvaro Santiago Jaramillo Baca:DIRECTOR-SUPLENTE
+GOBIERNO CORPORATIVO
+Rosa Elena Jativa:GERENTE GENERAL
+Mayra Londono:GERENTE DE FINANZAS Y ADMINISTRACIÓN
+Itzi Candanedo:GERENTE DE OPERACIONES
+Jose Manuel Perez:GERENTE DE RIESGOS
+Geovanny Balarezo:GERENTE DE TALENTO HUMANO
+Ana Mae Castillo:GERENTE DE CREDITO Y RECUPERACIONES
+Nixia Carrera:GERENTE DE CARTERA BROKER
+Isnel Villalba:OFICIAL DE AUDITORIA
+Leydiana Rovira:OFICIAL DE CUMPLIMIENTO
+
 Servicios
 1.	Cuenta ahorros
 2.	Cuenta corriente
@@ -26,6 +52,7 @@ a.	Debito
 b.	Crédito
 4.	Créditos
 5.	Depósitos a plazos
+
 Cuenta Corriente
 •	Beneficiarios
 o	Personas jurídicas
@@ -40,6 +67,7 @@ o	Puede solicitar su tarjeta de Débito
 o	Transferencias de fondos desde el exterior
 o	Estado de cuenta On-line
 o	Sobregiros Ocasionales
+
 Cuenta de ahorros
 •	Beneficios
 o	Incrementa sus Ahorros
@@ -50,6 +78,7 @@ o	Seguridad Jurídica
 o	Estado de cuenta On-line
 o	Usa tu dinero en cualquier lugar
 o	Seguridad en sus transacciones
+
 Tarjeta de crédito
 •	Visa
 o	VISA CRÉDITO PLATINUM
@@ -57,7 +86,7 @@ o	VISA CRÉDITO PLATINUM
 •	Línea de crédito mínima de $1,000.00.
 •	Aceptada en más de 22 millones de establecimientos alrededor del mundo
 •	Cómodos pagos mínimos mensuales.
-•	Servicio de Información para el Viajero
+•	Información para el Viajero
 •	Reposición de Tarjeta + Adelanto de Efectivo de Emergencia
 •	Centro de Atención de Beneficios de Tarjetas Visa
 •	Asistente Personal Visa Concierge
@@ -65,7 +94,8 @@ o	VISA CRÉDITO PLATINUM
 •	Protección de compras
 •	Protección de precios
 •	Garantía Extendida
-•	Servicios de Emergencia Médica Internacional + Certificado Schengen
+•	Emergencia Médica Internacional + Certificado Schengen
+
 Tarjeta de debito
 •	Visa
 o	VISA DÉBITO PLATINUM
@@ -74,7 +104,7 @@ o	VISA DÉBITO PLATINUM
 •	Aceptada mundialmente
 •	Compras por Internet hasta $1,000.00 por día.
 •	Retiros en efectivo en la red de cajeros automáticos Visa/Plus, hasta $ 500,00 diarios.
-•	Servicio gratuito de Alerta de Consumos y retiros, por correo electrónico.
+•	Alerta de Consumos y retiros, por correo electrónico.
 -	Protecciones
 •	Seguro de Accidentes de Viaje en Medios de Transporte
 •	Indemnización Médica de Emergencias en Viajes
@@ -84,12 +114,12 @@ o	Visa Infinite
 •	Línea de crédito mínima de $1,000.00.
 •	Aceptada en más de 22 millones de establecimientos alrededor del mundo
 •	Cómodos pagos mínimos mensuales.
-•	Exclusiva línea de servicio con nuestro Centro Procesador Evertec Costa Rica las 24 horas (24-7).
-•	Servicio de envío de estados de cuenta por correo electrónico gratuito.
-•	Servicio gratuito de Alerta de Consumos por correo electrónico.
+•	Exclusiva línea con nuestro Centro Procesador Evertec Costa Rica las 24 horas (24-7).
+•	Envío de estados de cuenta por correo electrónico gratuito.
+•	Alerta de Consumos por correo electrónico.
 •	Programa de Premios Austrobank Rewards
 •	Acceso a más de 530,000 cajeros automáticos Visa/PLUS® alrededor del mundo para retiros de efectivo
-•	Servicio de Información para el Viajero
+•	Información para el Viajero
 •	Reposición de Tarjeta + Adelanto de Efectivo de Emergencia
 •	Centro de Atención de Beneficios de Tarjetas Visa
 •	Asistente Personal Visa Concierge
@@ -103,9 +133,10 @@ o	Visa Infinite
 •	Protección de Compras
 •	Pérdida de Equipaje
 •	Demora de Equipaje
-•	Servicios de Emergencia Médica Internacional + Certificado Schengen
+•	Emergencia Médica Internacional + Certificado Schengen
 •	Seguro de Alquiler de Autos
 •	Seguro de Accidentes de Viaje en Medios de Transporte
+
 Créditos
 •	Beneficios
 o	Préstamos en General
@@ -113,11 +144,13 @@ o	Avales
 o	Aceptación Bancaria
 o	Cartas de Crédito
 o	Sobregiros en Cuentas
+
 Depósitos a plazos
 •	Beneficios
 o	Permite rentabilizar el dinero que no requieras movilizar de forma inmediata.
 o	Genera intereses calculados a una tasa fija que serán abonados al vencimiento del periodo contratado.
 o	Puedes reinvertir los intereses o abonarlos a la cuenta
+
 Banca en línea
 Instrucciones Ingreso:
 1.	Ingresar a  www.austrobank.net
