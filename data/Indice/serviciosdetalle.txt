@@ -158,3 +158,5 @@ Instrucciones Ingreso:
 a.	Si el nombre de usuario se ingresa correctamente, se presentará la pantalla de la contraseña con la imagen anti-phishing seleccionada en el registro de usuario.
 3.	Al hacer clic en el botón Siguiente, el sistema le solicitará el Token enviado al correo electrónico.
 a.	Si el Token es el correcto, el usuario puede ingresar a los servicios de Home Banking.
+
+Reclamos: https://recaustrobank.com/

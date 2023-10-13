@@ -20,13 +20,13 @@ from langdetect import detect_langs
 # logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 # logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
-# os.environ["OPENAI_API_KEY"] = "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"
-# os.environ["JWT_SECRET_KEY"] = "jtISz88zZHtS3vW/uFJB3pD7Mp21fiFeUC7KUdFRKN972An2kGyHmWQIhmitMt5fS4sOQAm3HJRjVY0IIkkG31"
-# os.environ["CONN_DB"] = 'vuhiloqb'
-# os.environ["CONN_USER"] = 'vuhiloqb'
-# os.environ["CONN_PASWD"] = 'QHIB189WQ1mqgDjvlbhMQPrml8zDMSYb'
-# os.environ["CONN_HOST"] = 'otto.db.elephantsql.com'
-# os.environ["CONN_PORT"] = '5432'
+os.environ["OPENAI_API_KEY"] = "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"
+os.environ["JWT_SECRET_KEY"] = "jtISz88zZHtS3vW/uFJB3pD7Mp21fiFeUC7KUdFRKN972An2kGyHmWQIhmitMt5fS4sOQAm3HJRjVY0IIkkG31"
+os.environ["CONN_DB"] = 'vuhiloqb'
+os.environ["CONN_USER"] = 'vuhiloqb'
+os.environ["CONN_PASWD"] = 'QHIB189WQ1mqgDjvlbhMQPrml8zDMSYb'
+os.environ["CONN_HOST"] = 'otto.db.elephantsql.com'
+os.environ["CONN_PORT"] = '5432'
 
 def saveModelDoc(filepath):
     loader = TextLoader(filepath,encoding='utf8')
@@ -44,21 +44,18 @@ def saveModelPdf(filepath):
     embeddings = OpenAIEmbeddings(model='text-embedding-ada-002')
     Chroma.from_documents(texts, embeddings,persist_directory="./model")    
 
-def queryModel(question,language):
-    detectado=detect(question)    
-    if(detectado==language):
-        db3 = Chroma(persist_directory="./model",embedding_function=OpenAIEmbeddings(model='text-embedding-ada-002'))
-        docs = db3.similarity_search(question)
-        chain = load_qa_chain(ChatOpenAI(temperature=0.1,model_name='gpt-3.5-turbo',max_tokens=1000), 
-                            chain_type="stuff")
-        response=chain.run(input_documents=docs, question=question)
-    else:
+def queryModel(question,language):    
+    db3 = Chroma(persist_directory="./model",embedding_function=OpenAIEmbeddings(model='text-embedding-ada-002'))
+    docs = db3.similarity_search(question)
+    chain = load_qa_chain(ChatOpenAI(temperature=0.1,model_name='gpt-3.5-turbo',max_tokens=1000), 
+                        chain_type="stuff")
+    response=chain.run(input_documents=docs, question=question)
+    detectado=detect(response)
+    if(detectado!=language):    
         if(language=="es"):
             response="Lo siento no entiendo este mensaje, intentalo en Español. O intenta otra frase"
-        elif(language=="en"):
-            response="Sorry I don't understand this message, Try in English or other phrase"
-        else: 
-            response="Language unknown"
+        else:
+            response="Sorry I don't understand this message, Try in English or other phrase"        
     return response
 
 def saveFileAudio(request):
