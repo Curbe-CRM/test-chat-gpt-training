@@ -1,0 +1,47 @@
+slogan austrobank: Más de 25 años creciendo contigo
+servicios austrobank: Cuenta ahorros,Cuenta corriente,Tarjetas crédito y debito,Créditos,Depósitos a plazos
+misión austrobank: Ofrecer productos financieros orientados a las necesidades específicas de nuestros clientes, mediante soluciones agiles y personalizadas
+visión austrobank: Ser un Banco sólido con proyección internacional y crecimiento sostenido. Con Tecnología de punta y un modelo operativo eficaz, transparente, confiable, con altos estándares de gobierno corporativo y respaldado por un capital humano competente y comprometido.
+valores austrobank:Moral y Ética,Integridad,Confidencialidad,Respeto,Profesionalismo,Responsabilidad,Proactividad
+Dirección austrobank: Calle 53 Este, Marbella. Edificio Humboldt Tower, Planta Baja
+Correo austrobank: contactanos@austrobank.com
+Teléfono austrobank: +507 223-4455
+Junta Directiva austrobank:
+    Luis Alberto Della Togna Arcia:DIRECTOR-PRESIDENTE
+    Rosa Elena Jativa Cadena:DIRECTOR-SECRETARIA
+    Miguel Angel Kerbes:DIRECTOR-INDEPENDIENTE
+    Martha Luna:DIRECTOR-INDEPENDIENTE
+    Sara Wendy Rodriguez:DIRECTOR-TESORERO
+    Maria De Los Angeles Roman:DIRECTOR
+    Juan Carlos Gallegos:DIRECTOR-INDEPENDIENTE
+    Alvaro Santiago Jaramillo Baca:DIRECTOR-SUPLENTE
+    GOBIERNO CORPORATIVO
+    Rosa Elena Jativa:GERENTE GENERAL
+    Mayra Londono:GERENTE DE FINANZAS Y ADMINISTRACIÓN
+    Itzi Candanedo:GERENTE DE OPERACIONES
+    Jose Manuel Perez:GERENTE DE RIESGOS
+    Geovanny Balarezo:GERENTE DE TALENTO HUMANO
+    Ana Mae Castillo:GERENTE DE CREDITO Y RECUPERACIONES
+    Nixia Carrera:GERENTE DE CARTERA BROKER
+    Isnel Villalba:OFICIAL DE AUDITORIA
+    Leydiana Rovira:OFICIAL DE CUMPLIMIENTO
+beneficios cuenta corriente austrobank:Incrementa sus Ahorros,Puede solicitar su tarjeta de Crédito,Consulta fácil y rápida,Recibe los intereses en su cuenta,Seguridad Jurídica,Estado de cuenta On-line,Usa tu dinero en cualquier lugar,Seguridad en sus transacciones
+beneficiarios cuenta corriente austrobank:Personas Naturales,Personas Juridicas
+beneficios cuenta de ahorros austrobank:Incrementa sus Ahorros,Puede solicitar su tarjeta de Crédito,Consulta fácil y rápida,Recibe los intereses en su cuenta,Seguridad Jurídica,Estado de cuenta On-line,Usa tu dinero en cualquier lugar,Seguridad en sus transacciones
+beneficios creditos austrobank:Préstamos en General,Avales,Aceptación Bancaria,Cartas de Crédito,Sobregiros en Cuentas
+beneficios depositos a plazo austrobank: Permite rentabilizar el dinero que no requieras movilizar de forma inmediata, Genera intereses calculados a una tasa fija que serán abonados al vencimiento del periodo contratado, Puedes reinvertir los intereses o abonarlos a la cuenta
+tarjetas de crédito austrobank: VISA CRÉDITO PLATINUM
+tarjetas de debito austrobank:VISA DÉBITO PLATINUM, VISA INFINITE
+benenficio VISA CREDITO PLATINUM austrobank:Línea de crédito mínima de $1,000.00, Aceptada en más de 22 millones de establecimientos alrededor del mundo, Cómodos pagos mínimos mensuales,Información para el Viajero, Reposición de Tarjeta + Adelanto de Efectivo de Emergencia,Centro de Atención de Beneficios de Tarjetas Visa,Asistente Personal Visa Concierge
+protecciones VISA CREDITO PLATINUM austrobank:Protección de compras,Protección de precios,Garantía Extendida,Emergencia Médica Internacional + Certificado Schengen
+beneficios VISA DÉBITO PLATINUM austrobank: Acceso a los fondos en todo momento, Aceptada mundialmente,Compras por Internet hasta $1,000.00 por día, Retiros en efectivo en la red de cajeros automáticos Visa/Plus, hasta $ 500,00 diarios,Alerta de Consumos y retiros, por correo electrónico.
+protecciones VISA DÉBITO PLATINUM austrobank: Seguro de Accidentes de Viaje en Medios de Transporte, Indemnización Médica de Emergencias en Viajes,Seguro para Autos Alquilados
+beneficios VISA INFINITE austrobank:Línea de crédito mínima de $1,000.00,Aceptada en más de 22 millones de establecimientos alrededor del mundo,Cómodos pagos mínimos mensuales,Exclusiva línea con nuestro Centro Procesador Evertec Costa Rica las 24 horas (24-7),Envío de estados de cuenta por correo electrónico gratuito,Alerta de Consumos por correo electrónico,Programa de Premios Austrobank Rewards,Acceso a más de 530,000 cajeros automáticos Visa/PLUS® alrededor del mundo para retiros de efectivo,Información para el Viajero,Reposición de Tarjeta + Adelanto de Efectivo de Emergencia,Centro de Atención de Beneficios de Tarjetas Visa,Asistente Personal Visa Conciergeprotecciones VISA INFINITE austrobank: Pérdida de Conexiones,Seguro de accidentes en destinos de Viajes,Demora de Viaje,Cancelación de Viaje,Protección de Precios,Garantía Extendida,Protección de Compras,Pérdida de Equipaje,Demora de Equipaje,Emergencia Médica Internacional + Certificado Schengen,Seguro de Alquiler de Autos,Seguro de Accidentes de Viaje en Medios de Transporte
+funciones servicio de información para el Viajero austrobank: Asistencia previa al viaje,Asistencia durante el viaje
+descripcion Asistencia previa al viaje: proporciona información sobre destinos,ubicación de cajeros automáticos, los tipos de cambio, pasaporte,visado,requisitos de salud,inmunizaciones.
+descripcion Asistencia durante al viaje: Los agentes del Centro de Asistencia al Cliente Visa le ayudarán a activar todos los seguros y beneficios de Visa Platinum, incluyendo los servicios de emergencia médica internacional.
+funciones Reposición de Tarjeta + Adelanto de Efectivo de Emergencia: Reemplazo urgente de tarjetas,Adelanto de efectivo de emergencia
+descripcion Centro de Atención de Beneficios de Tarjetas Visa:Puede comunicarse con el Centro de Asistencia al Cliente Visa para solicitar servicios o beneficios usando una red mundial de números telefónicos gratuitos.
+informacion relacionada Centro de Atención de Beneficios de Tarjetas Visa:Servicios de emergencia médica internacional,Transferencia a los agentes de Visa Rewards,Transferencia a los agentes de Visa Concerniege
+descripcion Asistente Personal Visa Concierge:Su Asistente Personal Visa Concierge trabaja para usted las 24 horas del día, los 365 días del año para facilitarle en todos los momentos de su día
+funciones Asistente Personal Visa Concierge: Recomendaciones y reservaciones de vuelos, hoteles, cruceros y excusiones, paseos y tours,Reservas y arreglos para alquilar vehículos (incluyendo automóviles de lujo), helicópteros y yates,Recomendaciones y reservaciones para teatros, ópera, ballet, conciertos, museos y otras actividades y eventos culturales y deportivos, restaurantes,Información y reservas para disfrutar de la vida nocturna","Excursiones y visitas a lugares de interés,Recomendaciones, horarios y reservas de canchas de tenis, campos de golf, gimnasios y clubes deportivos,Información sobre los deportes especiales que se pueden practicar en el destino donde te encuentres disfrutando el viaje de sus sueños,Recomendación y reserva de salones de conferencias en hoteles o centros ejecutivos,Sugerencias e ideas para regalos","Envío de arreglos florales, globos, canastas y paquetes de regalo

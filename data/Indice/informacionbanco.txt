@@ -1,0 +1,27 @@
+slogan austrobank: Más de 25 años creciendo contigo
+servicios austrobank : Cuenta ahorros,Cuenta corriente,Tarjetas crédito y debito,Créditos,Depósitos a plazos
+misión austrobank: Ofrecer productos financieros orientados a las necesidades específicas de nuestros clientes, mediante soluciones agiles y personalizadas
+visión austrobank: Ser un Banco sólido con proyección internacional y crecimiento sostenido. Con Tecnología de punta y un modelo operativo eficaz, transparente, confiable, con altos estándares de gobierno corporativo y respaldado por un capital humano competente y comprometido.
+valores austrobank:Moral y Ética,Integridad,Confidencialidad,Respeto,Profesionalismo,Responsabilidad,Proactividad
+Dirección austrobank: Calle 53 Este, Marbella. Edificio Humboldt Tower, Planta Baja
+Correo austrobank: contactanos@austrobank.com
+Teléfono austrobank: +507 223-4455
+Junta Directiva austrobank:
+    Luis Alberto Della Togna Arcia:DIRECTOR-PRESIDENTE
+    Rosa Elena Jativa Cadena:DIRECTOR-SECRETARIA
+    Miguel Angel Kerbes:DIRECTOR-INDEPENDIENTE
+    Martha Luna:DIRECTOR-INDEPENDIENTE
+    Sara Wendy Rodriguez:DIRECTOR-TESORERO
+    Maria De Los Angeles Roman:DIRECTOR
+    Juan Carlos Gallegos:DIRECTOR-INDEPENDIENTE
+    Alvaro Santiago Jaramillo Baca:DIRECTOR-SUPLENTE
+    GOBIERNO CORPORATIVO
+    Rosa Elena Jativa:GERENTE GENERAL
+    Mayra Londono:GERENTE DE FINANZAS Y ADMINISTRACIÓN
+    Itzi Candanedo:GERENTE DE OPERACIONES
+    Jose Manuel Perez:GERENTE DE RIESGOS
+    Geovanny Balarezo:GERENTE DE TALENTO HUMANO
+    Ana Mae Castillo:GERENTE DE CREDITO Y RECUPERACIONES
+    Nixia Carrera:GERENTE DE CARTERA BROKER
+    Isnel Villalba:OFICIAL DE AUDITORIA
+    Leydiana Rovira:OFICIAL DE CUMPLIMIENTO

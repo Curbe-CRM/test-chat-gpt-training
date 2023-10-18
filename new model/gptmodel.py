@@ -2,12 +2,15 @@ import logging
 import sys
 import os
 from flask_jwt_extended import JWTManager,create_access_token,jwt_required, get_jwt_identity
-from langchain.document_loaders import (PyPDFLoader,CSVLoader,TextLoader)
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.vectorstores import Chroma
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.chains.question_answering import load_qa_chain
-from langchain.chat_models import ChatOpenAI
+from llama_index import (
+    SimpleDirectoryReader,
+    PromptHelper,
+    GPTVectorStoreIndex,
+    LLMPredictor,
+    StorageContext,
+    load_index_from_storage,
+    ServiceContext,
+)
 from flask import (Flask, redirect, render_template, request,send_from_directory, url_for,jsonify, abort)
 import json
 from flask_cors import CORS
@@ -16,11 +19,12 @@ from werkzeug.datastructures import ImmutableMultiDict
 import psycopg2
 from langdetect import detect
 from langdetect import detect_langs
+from langchain import OpenAI
 
-logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
-logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
+# logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+# logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 os.environ["JWT_SECRET_KEY"] = "jtISz88zZHtS3vW/uFJB3pD7Mp21fiFeUC7KUdFRKN972An2kGyHmWQIhmitMt5fS4sOQAm3HJRjVY0IIkkG31"
 os.environ["CONN_DB"] = 'vuhiloqb'
 os.environ["CONN_USER"] = 'vuhiloqb'
@@ -28,36 +32,54 @@ os.environ["CONN_PASWD"] = 'QHIB189WQ1mqgDjvlbhMQPrml8zDMSYb'
 os.environ["CONN_HOST"] = 'otto.db.elephantsql.com'
 os.environ["CONN_PORT"] = '5432'
 
-def saveModelDoc(filepath):
-    loader = TextLoader(filepath,encoding='utf8')
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-    data=loader.load()
-    texts = text_splitter.split_documents(data)
-    embeddings = OpenAIEmbeddings(model='text-embedding-ada-002')
-    Chroma.from_documents(texts, embeddings,persist_directory="./model")
+def construct_index(directory_path):
+    max_input_size = 4096
+    num_outputs = 512
+    max_chunk_overlap = 1
+    chunk_size_limit = 600
 
-def saveModelPdf(filepath):
-    loader = PyPDFLoader(filepath)
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-    data=loader.load()
-    texts = text_splitter.split_documents(data)
-    embeddings = OpenAIEmbeddings(model='text-embedding-ada-002')
-    Chroma.from_documents(texts, embeddings,persist_directory="./model")    
+    prompt_helper = PromptHelper(
+        max_input_size,
+        num_outputs,
+        max_chunk_overlap,
+        chunk_size_limit
+    )
+    llm_predictor = LLMPredictor(
+        llm=OpenAI(
+            openai_api_key='',
+            temperature=0.1,
+            model_name="text-embedding-ada-002",
+            max_tokens=num_outputs,
+        )
+    )
+
+    documents = SimpleDirectoryReader(directory_path).load_data()
+
+    index = GPTVectorStoreIndex.from_documents(
+        documents,
+        llm_predictor=llm_predictor,
+        prompt_helper=prompt_helper
+    )
+    index.storage_context.persist(persist_dir='docs/model')
+    return index
 
 def queryModel(question,language):
-    db3 = Chroma(persist_directory="./model",embedding_function=OpenAIEmbeddings(model='text-embedding-ada-002'))
-    docs = db3.similarity_search(question)
-    chain = load_qa_chain(ChatOpenAI(temperature=0.1,model_name='gpt-3.5-turbo',max_tokens=1000), 
-                        chain_type="stuff")
-    response=chain.run(input_documents=docs, question=question)
-    print(response)
-    detectado=detect(response)
-    if(detectado!=language):    
-        if(language=="es"):
-            response="Lo siento no entiendo este mensaje, intentalo en Español. O intenta otra frase"
-        else:
-            response="Sorry I don't understand this message, Try in English or other phrase"        
-    return response
+    try:
+        storage_context = StorageContext.from_defaults(persist_dir='docs/model')
+        index = load_index_from_storage(storage_context)
+        solicitude = index.as_query_engine()
+        response=solicitude.query(question).response
+        print(response)
+        detectado=detect(response)        
+        if(detectado!=language):
+            if(language=="es"):
+                response="Lo siento no entiendo este mensaje, intentalo en Español. O intenta otra frase"
+            else:
+                response="Sorry I don't understand this message, Try in English or other phrase"
+        return response
+    except Exception as error:
+        print(error)
+        return error
 
 def saveFileAudio(request):
     audio = request.files['file']
@@ -68,10 +90,10 @@ def saveFileAudio(request):
 def speechText(file):
     audio_file= open(file, "rb")
     openai.api_key=os.environ["OPENAI_API_KEY"]
-    transcript = openai.Audio.transcribe("whisper-1", audio_file)    
+    transcript = openai.Audio.transcribe("whisper-1", audio_file)
     return transcript['text']
 
-def consultar_tabla(tabla, columnas="*", condicion=None,multiple=False):    
+def consultar_tabla(tabla, columnas="*", condicion=None,multiple=False):
     try:
         conn = psycopg2.connect(
             database=os.environ['CONN_DB'],
@@ -79,12 +101,12 @@ def consultar_tabla(tabla, columnas="*", condicion=None,multiple=False):
             password=os.environ['CONN_PASWD'],
             host=os.environ['CONN_HOST'],
             port=os.environ['CONN_PORT']
-        )        
+        )
         cursor = conn.cursor()
         if condicion:
             query = f"SELECT {columnas} FROM {tabla} WHERE {condicion};"
         else:
-            query = f"SELECT {columnas} FROM {tabla};"        
+            query = f"SELECT {columnas} FROM {tabla};"
         cursor.execute(query)
         if(multiple):
             resultados = cursor.fetchall()
@@ -97,7 +119,7 @@ def consultar_tabla(tabla, columnas="*", condicion=None,multiple=False):
         print("Error al conectar a la base de datos:", error)
 
 def guardar_fondo(tabla, datos):
-    try:        
+    try:
         conn = psycopg2.connect(
             database=os.environ['CONN_DB'],
             user=os.environ['CONN_USER'],
@@ -105,24 +127,24 @@ def guardar_fondo(tabla, datos):
             host=os.environ['CONN_HOST'],
             port=os.environ['CONN_PORT']
         )         
-        cursor = conn.cursor()        
-        consulta = f"INSERT INTO {tabla} (est_emp_id,est_color_fondo_prin,est_color_prin_fondo,est_color_sec_fondo,est_color_ter_fondo) VALUES (%s, %s, %s, %s, %s)"        
+        cursor = conn.cursor()
+        consulta = f"INSERT INTO {tabla} (est_emp_id,est_color_fondo_prin,est_color_prin_fondo,est_color_sec_fondo,est_color_ter_fondo) VALUES (%s, %s, %s, %s, %s)"
         for dato in datos:
-            valores = (dato['est_emp_id'], dato['est_color_fondo_prin'], dato['est_color_prin_fondo'],dato['est_color_sec_fondo'],dato['est_color_ter_fondo'])                       
+            valores = (dato['est_emp_id'], dato['est_color_fondo_prin'], dato['est_color_prin_fondo'],dato['est_color_sec_fondo'],dato['est_color_ter_fondo'])
             cursor.execute(consulta, valores)
         conn.commit()
-        print("Datos insertados con éxito.")        
-    except Exception as e:        
+        print("Datos insertados con éxito.")
+    except Exception as e:
         conn.rollback()
         print(f"Error: {e}")
         return (f"Error: {e}")
-    finally:        
+    finally:
         cursor.close()
         conn.close()
         return "Datos insertados con éxito."
     
 def guardar_color(tabla, datos):
-    try:        
+    try:
         conn = psycopg2.connect(
             database=os.environ['CONN_DB'],
             user=os.environ['CONN_USER'],
@@ -230,20 +252,7 @@ def actualizarColor(id,est_color_prin_color,est_color_sec_color,est_color_ter_co
     resultados=actualizar_fondo(tabla=tabla,columna_condicion=columna_condicion,valor_condicion=valor_condicion,nuevos_valores=nuevosvalores)
     return resultados
 
-# saveModelDoc('data/Indice/creditos.txt')
-# saveModelDoc('data/Indice/cuentaahorros.txt')
-# saveModelDoc('data/Indice/cuentacorriente.txt')
-# saveModelDoc('data/Indice/depositosaplazo.txt')
-# saveModelDoc('data/Indice/informacionbanco.txt')
-# saveModelDoc('data/Indice/tarjetascredito.txt')
-# saveModelDoc('data/Indice/tarjetasdebito.txt')
-
-# saveModelDoc('data/todo.txt')
-
-# saveModelDoc('data/pdfs.txt')
-# saveModelDoc('data/reclamos.txt')
-# saveModelPdf('data/tarifario/TARIFARIO-ABO-21JUL2023.pdf')
-# saveModelPdf('data/tarifario/TARIFARIO-TASA-ABO-21AGO2023.pdf')
+# construct_index('docs/Train/')
 
 app = Flask(__name__)
 app.config["JWT_SECRET_KEY"] = os.environ["JWT_SECRET_KEY"]
@@ -284,8 +293,8 @@ def consult_style():
 def save_background():
     est_emp_id = request.json.get("est_emp_id", None)
     est_color_fondo_prin = request.json.get("est_color_fondo_prin", None)
-    est_color_prin_fondo = request.json.get("est_color_prin_fondo", None)
-    est_color_sec_fondo = request.json.get("est_color_sec_fondo", None)
+    est_color_prin_fondo = request.json.get("est_color_prin_fondo", None)    
+    est_color_sec_fondo = request.json.get("est_color_sec_fondo", None)    
     est_color_ter_fondo = request.json.get("est_color_ter_fondo", None)
     verificar=existenteEstilo(est_emp_id)    
     if(verificar!=None):
