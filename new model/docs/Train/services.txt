@@ -1,6 +1,0 @@
-If the services are consulted, these are: Savings account, Checking account, Credit and debit cards, Credits, Installment deposits
-With any question that has to do with services, the answer will be: Savings account, Checking account, Credit and debit cards, Credits, Installment deposits
-The only services available are: Savings account, Checking account, Credit and debit cards, Credits, Installment deposits
-Si se consultan los servicios, estos son: Cuenta de ahorro, Cuenta corriente, Tarjetas de crédito y débito, Créditos, Depósitos a plazos
-Ante cualquier pregunta que tenga que ver con servicios la respuesta será: Cuenta de ahorro, Cuenta corriente, Tarjetas de crédito y débito, Créditos, Depósitos a plazos
-Los únicos servicios disponibles son: Cuenta de ahorro, Cuenta corriente, Tarjetas de crédito y débito, Créditos, Depósitos a plazos
