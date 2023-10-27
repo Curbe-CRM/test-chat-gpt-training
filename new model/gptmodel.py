@@ -24,13 +24,15 @@ from langchain import OpenAI
 # logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 # logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 os.environ["JWT_SECRET_KEY"] = "jtISz88zZHtS3vW/uFJB3pD7Mp21fiFeUC7KUdFRKN972An2kGyHmWQIhmitMt5fS4sOQAm3HJRjVY0IIkkG31"
 os.environ["CONN_DB"] = 'vuhiloqb'
 os.environ["CONN_USER"] = 'vuhiloqb'
 os.environ["CONN_PASWD"] = 'QHIB189WQ1mqgDjvlbhMQPrml8zDMSYb'
 os.environ["CONN_HOST"] = 'otto.db.elephantsql.com'
 os.environ["CONN_PORT"] = '5432'
+
+openai.api_key=os.environ["OPENAI_API_KEY"]
 
 def construct_index(directory_path):
     max_input_size = 4096
